@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Главная" })
+  <body>
+    @@include('html/header.html')
+
+    <main>
+      <section class="hero section-top section-pad-bottom">
+        <div class="container">
+          <div class="hero__container">
+            <div class="hero__slider">
+              <div class="swiper doctorsSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide hero__slide">
+                    <div class="hero__title title-color"><h1>Сеть <strong>независимых</strong> диагностических центров</h1></div>
+                    <div class="hero__desc"><p>Но понимание сути ресурсосберегающих технологий способствует подготовке</p></div>
+                    <div class="hero__img"><img src="@img/hero-person-1.png" alt="Person 1"></div>
+                  </div>
+                  <div class="swiper-slide hero__slide">
+                    <div class="hero__title title-color"><h2>Сеть <strong>современных</strong> диагностических центров</h2></div>
+                    <div class="hero__desc"><p>Но понимание сути ресурсосберегающих технологий способствует подготовке</p></div>
+                    <div class="hero__img"><img src="@img/hero-person-2.png" alt="Person 2"></div>
+                  </div>
+                  <div class="swiper-slide hero__slide">
+                    <div class="hero__title title-color"><h2>Сеть <strong>лучших</strong> диагностических центров</h2></div>
+                    <div class="hero__desc"><p>Но понимание сути ресурсосберегающих технологий способствует подготовке</p></div>
+                    <div class="hero__img"><img src="@img/hero-person-3.png" alt="Person 3"></div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+            <a class="hero__btn button button_light">
+              <span>Записаться на прием</span>
+              <div class="icon">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.0624 1.125C4.91321 1.125 4.77014 1.18426 4.66465 1.28975C4.55916 1.39524 4.4999 1.53832 4.4999 1.6875C4.4999 1.83668 4.55916 1.97976 4.66465 2.08525C4.77014 2.19074 4.91321 2.25 5.0624 2.25H14.9545L1.28971 15.9148C1.0701 16.1345 1.0701 16.4906 1.28971 16.7102C1.50937 16.9299 1.86548 16.9299 2.08514 16.7102L15.75 3.04543V12.9376C15.75 13.0867 15.8092 13.2298 15.9147 13.3353C16.0202 13.4408 16.1633 13.5001 16.3125 13.5001C16.4616 13.5001 16.6047 13.4408 16.7102 13.3353C16.8157 13.2298 16.875 13.0867 16.875 12.9376V1.68756C16.8749 1.53838 16.8157 1.39531 16.7102 1.28983C16.6047 1.18434 16.4616 1.12507 16.3125 1.12506L5.0624 1.125Z" fill="white"/>
+                </svg>                  
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="services section-pad">
+        <div class="container">
+          <div class="services__container">
+            <div class="services__top">
+              <h2 class="services__title title-up">Услуги</h2>
+              <div class="services__desc">В целом, конечно, сложившаяся структура организации обеспечивает актуальность вывода текущих активов.</div>
+            </div>
+            <div class="services__cards">
+              @@include('html/serviceCard.html')
+              @@include('html/serviceCard.html')
+              @@include('html/serviceCard.html')
+            </div>
+            <a href="" class="services__link">Все услуги</a>
+          </div>
+        </div>
+      </section>
+      <section class="cooperation section-pad">
+        <div class="container">
+          <div class="cooperation__container">
+            <div class="cooperation__top">
+              <h2 class="cooperation__title title-up">Сотрудничество</h2>
+              <div class="cooperation__desc">
+                <div class="cooperation__caption">В целом, конечно, сложившаяся структура организации обеспечивает актуальность вывода</div>
+                <p>В целом, конечно, сложившаяся структура организации обеспечивает актуальность вывода текущих активов.</p>
+              </div>
+            </div>
+            <div class="cooperation__box">
+              <img src="@img/cooper.png" alt="cooperation image">
+              <div class="cooperation__benefits">
+                <div class="cooperation__item">
+                  <div class="cooperation__num">150+</div>
+                  <div class="cooperation__txt">постоянных клиентов</div>
+                </div>
+                <div class="cooperation__item">
+                  <div class="cooperation__num">200+</div>
+                  <div class="cooperation__txt">отзывов</div>
+                </div>
+                <div class="cooperation__item">
+                  <div class="cooperation__num">10</div>
+                  <div class="cooperation__txt">лет на рынке</div>
+                </div>
+                <div class="cooperation__item">
+                  <div class="cooperation__num">20</div>
+                  <div class="cooperation__txt">сотрудников</div>
+                </div>
+              </div>
+            </div>
+            <a class="cooperation__btn button button_border" href="#">Узнать больше</a>
+          </div>
+        </div>
+      </section>
+      <section class="reviews section-pad-bottom">
+        <div class="container">
+          <div class="reviews__container">
+            <h2 class="reviews__title title-up">Отзывы</h2>
+            <div class="reviews__slider">
+              <div class="swiper reviewsSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">@@include('html/reviewsCard.html')</div>
+                  <div class="swiper-slide">@@include('html/reviewsCard.html')</div>
+                  <div class="swiper-slide">@@include('html/reviewsCard.html')</div>
+                  <div class="swiper-slide">@@include('html/reviewsCard.html')</div>
+                  <div class="swiper-slide">@@include('html/reviewsCard.html')</div>
+                </div>
+                <div class="swiper-button swiper-button-next reviews-button-next">
+                  <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.9602 9.36567L5.9519 0.245066C5.62348 -0.0816885 5.09085 -0.0816885 4.76243 0.245066C4.43401 0.571794 4.43401 1.10195 4.76243 1.4287L14.1673 10L4.76326 18.5713C4.43484 18.898 4.43484 19.4282 4.76326 19.7549C5.09168 20.0817 5.62431 20.0817 5.95271 19.7549L15.961 10.6343C16.1361 10.4601 16.2111 10.2292 16.1994 10.0008C16.2103 9.77161 16.1353 9.54071 15.9602 9.36567Z" fill="white"/>
+                  </svg>                                      
+                </div>
+                <div class="swiper-button swiper-button-prev reviews-button-prev">
+                  <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.7566 10.6343L14.7649 19.7549C15.0933 20.0817 15.6259 20.0817 15.9544 19.7549C16.2828 19.4282 16.2828 18.8981 15.9544 18.5713L6.54953 9.99999L15.9535 1.42871C16.282 1.10195 16.282 0.571796 15.9535 0.245068C15.6251 -0.0816612 15.0925 -0.0816612 14.7641 0.245068L4.75577 9.36567C4.58073 9.53986 4.50568 9.77078 4.51737 9.99916C4.50649 10.2284 4.58151 10.4593 4.7566 10.6343Z" fill="white"/>
+                  </svg>                                      
+                </div>
+              </div>
+            </div>
+            <a class="reviews__btn button button_border" href="#">Оставить отзыв</a>
+          </div>
+        </div>
+      </section>
+      <section class="knowledge section-pad">
+        <div class="container">
+          <div class="knowledge__container">
+            <div class="knowledge__top">
+              <h2 class="knowledge__title title-up">База знаний</h2>
+            </div>
+            <div class="knowledge__slider">
+              <div class="swiper knowledgeSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    @@include('html/knowledgeCard.html') 
+                  </div>
+                  <div class="swiper-slide">
+                    @@include('html/knowledgeCard.html') 
+                  </div>
+                  <div class="swiper-slide">
+                    @@include('html/knowledgeCard.html') 
+                  </div>
+                  <div class="swiper-slide">
+                    @@include('html/knowledgeCard.html') 
+                  </div>
+                  <div class="swiper-slide">
+                    @@include('html/knowledgeCard.html') 
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="knowledge__buttons">
+              <a class="knowledge__btn button button_light" href="#">Смотреть все</a>
+              <div class="knowledge__arrows">
+                <div class="knowledge-arrow knowledge-button-prev">
+                  <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20.7031 12.6094C20.9189 12.6094 21.0938 12.7843 21.0938 13C21.0938 13.2157 20.9189 13.3907 20.7031 13.3907H4.9959L10.5789 18.9738C10.7315 19.1263 10.7315 19.3737 10.5789 19.5262C10.4264 19.6788 10.1791 19.6788 10.0265 19.5262L4.19082 13.6905C3.80957 13.3092 3.80957 12.6908 4.19082 12.3095L10.0265 6.47379C10.1791 6.32124 10.4264 6.32124 10.5789 6.47379C10.7315 6.62633 10.7315 6.87368 10.5789 7.02622L4.9957 12.6094H20.7031Z" fill="white"/>
+                  </svg>                    
+                </div>
+                <div class="knowledge-arrow knowledge-button-next">
+                  <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.29688 13.3906C4.08113 13.3906 3.90625 13.2157 3.90625 13C3.90625 12.7843 4.08113 12.6093 4.29688 12.6093L20.0041 12.6093L14.4211 7.02622C14.2685 6.87368 14.2685 6.62634 14.4211 6.4738C14.5736 6.32124 14.8209 6.32124 14.9735 6.4738L20.8092 12.3095C21.1904 12.6908 21.1904 13.3092 20.8092 13.6905L14.9735 19.5262C14.8209 19.6788 14.5736 19.6788 14.4211 19.5262C14.2685 19.3737 14.2685 19.1263 14.4211 18.9738L20.0043 13.3906L4.29688 13.3906Z" fill="white"/>
+                  </svg>                    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="educational section-pad-top">
+        <div class="container">
+          <div class="educational__container">
+            <div class="educational__top">
+              <h2 class="educational__title title-up">Учебный центр</h2>
+              <a href="" class="educational__btn button button_light">Смотреть все</a>
+            </div>
+            <div class="educational__cards">
+              @@include('html/educationalCard.html') 
+              @@include('html/educationalCard.html') 
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="webinar section-pad-top">
+        <div class="container">
+          <div class="webinar__container">
+            <div class="webinar__content">
+              <h2 class="webinar__title title-color">Запишитесь <br> на <strong>онлайн вебинар</strong></h2>
+              <div class="webinar__desc">
+                <p>Ясность нашей позиции очевидна: базовый вектор развития играет определяющее значение для вывода текущих активов.</p>
+              </div>
+              <a class="webinar__btn button button_border" href="#">Записаться</a>
+            </div>
+            <div class="webinar__box">
+              <div class="webinar__img"><img src="@img/webinar.png" alt="webinar image"></div>
+              <div class="webinar__reviews">
+                <div class="webinar__faces">
+                  <div class="webinar__face"><img src="@img/author-2.png" alt=""></div>
+                  <div class="webinar__face"><img src="@img/author-3.png" alt=""></div>
+                  <div class="webinar__face"><img src="@img/author-2.png" alt=""></div>
+                  <div class="webinar__face"><img src="@img/author-3.png" alt=""></div>
+                </div>
+                <div class="webinar__grade">
+                  <span>4.9 / 5</span>
+                  <div class="webinar__stars">
+                    <svg class="star" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_892_270)">
+                      <path d="M24.9657 9.58547C24.8836 9.33405 24.6681 9.15446 24.4064 9.11341L16.6071 8.00508L13.0974 0.949776C12.9794 0.713744 12.7382 0.564941 12.4765 0.564941C12.2149 0.564941 11.9737 0.713744 11.8557 0.954907L8.39217 8.03074L0.592848 9.19037C0.33116 9.23142 0.115652 9.41101 0.0335543 9.66244C-0.0485438 9.91386 0.023292 10.1909 0.213144 10.3705L5.87278 15.8557L4.56434 23.6242C4.51816 23.8859 4.62592 24.1476 4.84142 24.3016C4.95944 24.3888 5.10311 24.435 5.24678 24.435C5.35967 24.435 5.46742 24.4093 5.57005 24.3529L12.533 20.6636L19.5165 24.3118C19.6191 24.3631 19.7268 24.3888 19.8346 24.3888C20.2143 24.3888 20.5273 24.0758 20.5273 23.6961C20.5273 23.6396 20.5222 23.5883 20.5068 23.537L19.1573 15.8147L24.781 10.2987C24.9811 10.114 25.0478 9.8369 24.9657 9.58547ZM17.9361 15.0809C17.7719 15.24 17.7 15.4709 17.7411 15.6967L18.9161 22.4338L12.8511 19.2679C12.651 19.1602 12.4098 19.1653 12.2046 19.2679L6.16013 22.4697L7.29411 15.7223C7.33002 15.4965 7.25819 15.2708 7.09399 15.1117L2.18863 10.35L8.95659 9.34431C9.18236 9.30839 9.37735 9.16985 9.47484 8.9646L12.4817 2.82264L15.5296 8.94921C15.6322 9.15446 15.8272 9.293 16.0529 9.32891L22.826 10.2936L17.9361 15.0809Z" fill="black"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_892_270">
+                      <rect width="25" height="25" fill="white"/>
+                      </clipPath>
+                      </defs>
+                    </svg>   
+                    <svg class="star" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_892_270)">
+                      <path d="M24.9657 9.58547C24.8836 9.33405 24.6681 9.15446 24.4064 9.11341L16.6071 8.00508L13.0974 0.949776C12.9794 0.713744 12.7382 0.564941 12.4765 0.564941C12.2149 0.564941 11.9737 0.713744 11.8557 0.954907L8.39217 8.03074L0.592848 9.19037C0.33116 9.23142 0.115652 9.41101 0.0335543 9.66244C-0.0485438 9.91386 0.023292 10.1909 0.213144 10.3705L5.87278 15.8557L4.56434 23.6242C4.51816 23.8859 4.62592 24.1476 4.84142 24.3016C4.95944 24.3888 5.10311 24.435 5.24678 24.435C5.35967 24.435 5.46742 24.4093 5.57005 24.3529L12.533 20.6636L19.5165 24.3118C19.6191 24.3631 19.7268 24.3888 19.8346 24.3888C20.2143 24.3888 20.5273 24.0758 20.5273 23.6961C20.5273 23.6396 20.5222 23.5883 20.5068 23.537L19.1573 15.8147L24.781 10.2987C24.9811 10.114 25.0478 9.8369 24.9657 9.58547ZM17.9361 15.0809C17.7719 15.24 17.7 15.4709 17.7411 15.6967L18.9161 22.4338L12.8511 19.2679C12.651 19.1602 12.4098 19.1653 12.2046 19.2679L6.16013 22.4697L7.29411 15.7223C7.33002 15.4965 7.25819 15.2708 7.09399 15.1117L2.18863 10.35L8.95659 9.34431C9.18236 9.30839 9.37735 9.16985 9.47484 8.9646L12.4817 2.82264L15.5296 8.94921C15.6322 9.15446 15.8272 9.293 16.0529 9.32891L22.826 10.2936L17.9361 15.0809Z" fill="black"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_892_270">
+                      <rect width="25" height="25" fill="white"/>
+                      </clipPath>
+                      </defs>
+                    </svg>  
+                    <svg class="star" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_892_270)">
+                      <path d="M24.9657 9.58547C24.8836 9.33405 24.6681 9.15446 24.4064 9.11341L16.6071 8.00508L13.0974 0.949776C12.9794 0.713744 12.7382 0.564941 12.4765 0.564941C12.2149 0.564941 11.9737 0.713744 11.8557 0.954907L8.39217 8.03074L0.592848 9.19037C0.33116 9.23142 0.115652 9.41101 0.0335543 9.66244C-0.0485438 9.91386 0.023292 10.1909 0.213144 10.3705L5.87278 15.8557L4.56434 23.6242C4.51816 23.8859 4.62592 24.1476 4.84142 24.3016C4.95944 24.3888 5.10311 24.435 5.24678 24.435C5.35967 24.435 5.46742 24.4093 5.57005 24.3529L12.533 20.6636L19.5165 24.3118C19.6191 24.3631 19.7268 24.3888 19.8346 24.3888C20.2143 24.3888 20.5273 24.0758 20.5273 23.6961C20.5273 23.6396 20.5222 23.5883 20.5068 23.537L19.1573 15.8147L24.781 10.2987C24.9811 10.114 25.0478 9.8369 24.9657 9.58547ZM17.9361 15.0809C17.7719 15.24 17.7 15.4709 17.7411 15.6967L18.9161 22.4338L12.8511 19.2679C12.651 19.1602 12.4098 19.1653 12.2046 19.2679L6.16013 22.4697L7.29411 15.7223C7.33002 15.4965 7.25819 15.2708 7.09399 15.1117L2.18863 10.35L8.95659 9.34431C9.18236 9.30839 9.37735 9.16985 9.47484 8.9646L12.4817 2.82264L15.5296 8.94921C15.6322 9.15446 15.8272 9.293 16.0529 9.32891L22.826 10.2936L17.9361 15.0809Z" fill="black"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_892_270">
+                      <rect width="25" height="25" fill="white"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+                    <svg class="star" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_892_270)">
+                      <path d="M24.9657 9.58547C24.8836 9.33405 24.6681 9.15446 24.4064 9.11341L16.6071 8.00508L13.0974 0.949776C12.9794 0.713744 12.7382 0.564941 12.4765 0.564941C12.2149 0.564941 11.9737 0.713744 11.8557 0.954907L8.39217 8.03074L0.592848 9.19037C0.33116 9.23142 0.115652 9.41101 0.0335543 9.66244C-0.0485438 9.91386 0.023292 10.1909 0.213144 10.3705L5.87278 15.8557L4.56434 23.6242C4.51816 23.8859 4.62592 24.1476 4.84142 24.3016C4.95944 24.3888 5.10311 24.435 5.24678 24.435C5.35967 24.435 5.46742 24.4093 5.57005 24.3529L12.533 20.6636L19.5165 24.3118C19.6191 24.3631 19.7268 24.3888 19.8346 24.3888C20.2143 24.3888 20.5273 24.0758 20.5273 23.6961C20.5273 23.6396 20.5222 23.5883 20.5068 23.537L19.1573 15.8147L24.781 10.2987C24.9811 10.114 25.0478 9.8369 24.9657 9.58547ZM17.9361 15.0809C17.7719 15.24 17.7 15.4709 17.7411 15.6967L18.9161 22.4338L12.8511 19.2679C12.651 19.1602 12.4098 19.1653 12.2046 19.2679L6.16013 22.4697L7.29411 15.7223C7.33002 15.4965 7.25819 15.2708 7.09399 15.1117L2.18863 10.35L8.95659 9.34431C9.18236 9.30839 9.37735 9.16985 9.47484 8.9646L12.4817 2.82264L15.5296 8.94921C15.6322 9.15446 15.8272 9.293 16.0529 9.32891L22.826 10.2936L17.9361 15.0809Z" fill="black"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_892_270">
+                      <rect width="25" height="25" fill="white"/>
+                      </clipPath>
+                      </defs>
+                    </svg>  
+                    <svg class="star" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_892_270)">
+                      <path d="M24.9657 9.58547C24.8836 9.33405 24.6681 9.15446 24.4064 9.11341L16.6071 8.00508L13.0974 0.949776C12.9794 0.713744 12.7382 0.564941 12.4765 0.564941C12.2149 0.564941 11.9737 0.713744 11.8557 0.954907L8.39217 8.03074L0.592848 9.19037C0.33116 9.23142 0.115652 9.41101 0.0335543 9.66244C-0.0485438 9.91386 0.023292 10.1909 0.213144 10.3705L5.87278 15.8557L4.56434 23.6242C4.51816 23.8859 4.62592 24.1476 4.84142 24.3016C4.95944 24.3888 5.10311 24.435 5.24678 24.435C5.35967 24.435 5.46742 24.4093 5.57005 24.3529L12.533 20.6636L19.5165 24.3118C19.6191 24.3631 19.7268 24.3888 19.8346 24.3888C20.2143 24.3888 20.5273 24.0758 20.5273 23.6961C20.5273 23.6396 20.5222 23.5883 20.5068 23.537L19.1573 15.8147L24.781 10.2987C24.9811 10.114 25.0478 9.8369 24.9657 9.58547ZM17.9361 15.0809C17.7719 15.24 17.7 15.4709 17.7411 15.6967L18.9161 22.4338L12.8511 19.2679C12.651 19.1602 12.4098 19.1653 12.2046 19.2679L6.16013 22.4697L7.29411 15.7223C7.33002 15.4965 7.25819 15.2708 7.09399 15.1117L2.18863 10.35L8.95659 9.34431C9.18236 9.30839 9.37735 9.16985 9.47484 8.9646L12.4817 2.82264L15.5296 8.94921C15.6322 9.15446 15.8272 9.293 16.0529 9.32891L22.826 10.2936L17.9361 15.0809Z" fill="black"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_892_270">
+                      <rect width="25" height="25" fill="white"/>
+                      </clipPath>
+                      </defs>
+                    </svg>                                                             
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="branches section-pad">
+        <div class="container">
+          <div class="branches__container">
+            <div class="branches__top">
+              <div class="branches__headers">
+                <h2 class="branches__title title-color title-up"><strong>11 центров</strong> в Казахстане</h2>
+                <h2 class="branches__title title-color title-up"><strong>Новый центр</strong> в кыргызстане</h2>
+              </div>
+              <a href="" class="branches__btn button button_light">Смотреть все</a>
+            </div>
+            <div class="branches__accordion swiper accordion-slider">
+              <div class="swiper-wrapper branches__wrapper">
+                <div class="branches__item accordion-item swiper-slide">
+                  <button class="branches__caption accordion-button">
+                    <span>г. Астана</span>
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M23.501 11.0007L13.7786 11.0301V1.49901C13.7786 0.668541 13.11 0 12.2796 0C11.4494 0 10.7806 0.668541 10.7806 1.49901L10.8099 11.001H1.49901C0.668541 11.001 0 11.6695 0 12.5C0 13.3302 0.668541 13.9987 1.49901 13.9987H10.7952V23.501C10.7952 24.3309 11.4638 25 12.2943 25C13.1247 25 13.7933 24.3309 13.7933 23.501V13.999H23.501C24.3315 13.999 25 13.3299 25 12.5C25 11.6693 24.324 11.0007 23.501 11.0007Z" fill="white"/>
+                    </svg>                  
+                  </button>
+                  <div class="branches__content accordion-content">
+                    <div class="branches__info">
+                      <p>ул. Кобылай Батыра, 12</p>
+                      <p>+7 701 224 2430</p>
+                      <p>3dtonomag@gmail.com</p>
+                      <br>
+                      <p>ул. Кобылай Батыра, 12</p>
+                      <p>+7 701 224 2430</p>
+                      <p>3dtonomag@gmail.com</p>
+                      <br>
+                      <p>ул. Кобылай Батыра, 12</p>
+                      <p>+7 701 224 2430</p>
+                      <p>3dtonomag@gmail.com</p>
+                    </div>
+                    <div class="branches__map"><img src="@img/map.png" alt="map"></div>
+                  </div>
+                </div>
+                <div class="branches__item accordion-item swiper-slide">
+                  <button class="branches__caption accordion-button">
+                    <span>г. Караганда</span>
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M23.501 11.0007L13.7786 11.0301V1.49901C13.7786 0.668541 13.11 0 12.2796 0C11.4494 0 10.7806 0.668541 10.7806 1.49901L10.8099 11.001H1.49901C0.668541 11.001 0 11.6695 0 12.5C0 13.3302 0.668541 13.9987 1.49901 13.9987H10.7952V23.501C10.7952 24.3309 11.4638 25 12.2943 25C13.1247 25 13.7933 24.3309 13.7933 23.501V13.999H23.501C24.3315 13.999 25 13.3299 25 12.5C25 11.6693 24.324 11.0007 23.501 11.0007Z" fill="white"/>
+                    </svg> 
+                  </button>
+                  <div class="branches__content accordion-content">
+                    <div class="branches__info">
+                      <p>ул. Кобылай Батыра, 12</p>
+                      <p>+7 701 224 2430</p>
+                      <p>3dtonomag@gmail.com</p>
+                      <br>
+                      <p>ул. Кобылай Батыра, 12</p>
+                      <p>+7 701 224 2430</p>
+                      <p>3dtonomag@gmail.com</p>
+                      <br>
+                      <p>ул. Кобылай Батыра, 12</p>
+                      <p>+7 701 224 2430</p>
+                      <p>3dtonomag@gmail.com</p>
+                    </div>
+                    <div class="branches__map"><img src="@img/map.png" alt="map"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="feedback section-pad">
+        <div class="container">
+          <div class="feedback__container">
+            <h2 class="feedback__title title-up"><strong>Заполните форму,</strong> чтобы связаться с нами</h2>
+            <div class="feedback__form">
+              <form action="">
+                <input type="text" name="name" placeholder="Имя" class="form__field" required>
+                <input type="email" name="email" placeholder="E-mail" class="form__field">
+                <input type="tel" name="tel" placeholder="Номер телефона" class="form__field" required>
+                <input type="text" name="city" placeholder="Город" class="form__field">
+                <input type="text" name="message" placeholder="Сообщение" class="form__field">
+                <input type="submit" value="Отправить заявку" class="form__btn button button_light">
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>
