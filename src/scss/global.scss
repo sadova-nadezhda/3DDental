@@ -165,16 +165,16 @@ input:invalid, textarea:invalid {
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
   input[type=checkbox],
   input[type=radio] {
-    --active: #3E516E;
+    --active: #E3BC85;
     --active-inner: #fff;
-    --focus: 2px rgba(62, 81, 110, .3);
-    --background: #3E516E;
+    --focus: 2px rgba(255, 255, 255, .3);
+    --background: transparent;
     --border: #fff;
     --disabled: #F6F8FF;
     --disabled-inner: #E1E6F9;
     -webkit-appearance: none;
     -moz-appearance: none;
-    height: 21px;
+    height: 25px;
     outline: none;
     display: inline-block;
     vertical-align: top;
@@ -197,7 +197,7 @@ input:invalid, textarea:invalid {
   input[type=checkbox]:checked,
   input[type=radio]:checked {
     --b: var(--active);
-    --bc: var(--active);
+    --bc: var(--active-inner);
     --d-o: .3s;
     --d-t: .6s;
     --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
@@ -223,7 +223,8 @@ input:invalid, textarea:invalid {
   }
   input[type=checkbox]:not(.switch),
   input[type=radio]:not(.switch) {
-    width: 21px;
+    width: 25px;
+    min-width: 25px;
   }
   input[type=checkbox]:not(.switch):after,
   input[type=radio]:not(.switch):after {
@@ -236,32 +237,34 @@ input:invalid, textarea:invalid {
   input[type=checkbox] + label,
   input[type=radio] + label {
     display: inline-block;
-    margin-left: 4px;
     font-family: Lato;
     font-size: 16px;
-    font-style: normal;
     font-weight: 300;
-    line-height: 20px;
-    vertical-align: top;
+    line-height: 1.2em;
     cursor: pointer;
   }
   input[type=checkbox]:not(.switch) {
-    border-radius: 7px;
+    border-radius: 3px;
   }
   input[type=checkbox]:not(.switch):after {
-    width: 5px;
-    height: 9px;
+    width: 7px;
+    height: 10px;
     border: 2px solid var(--active-inner);
     border-top: 0;
     border-left: 0;
-    left: 6px;
-    top: 2px;
+    left: 8px;
+    top: 4px;
     transform: rotate(var(--r, 20deg));
   }
   input[type=checkbox]:not(.switch):checked {
     --r: 43deg;
   }
   input[type=checkbox].switch {
+    --active: #3E516E;
+    --active-inner: #fff;
+    --focus: 2px rgba(255, 255, 255, .3);
+    --background: #3E516E;
+    --border: #fff;
     width: 52px;
     height: 30px;
     border-radius: 30px;

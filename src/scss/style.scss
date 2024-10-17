@@ -1466,6 +1466,7 @@
       font-weight: 600;
     }
     @media (max-width: 980px) {
+      max-width: unset;
       font-size: 32px;
     }
     @media (max-width: 767px) {
@@ -1473,7 +1474,7 @@
     }
   }
   &__form {
-    max-width: 690px;
+    max-width: 51.5%;
     form {
       display: flex;
       flex-wrap: wrap;
@@ -1494,6 +1495,28 @@
       @media(max-width: 767px) {
         margin-top: 16px;
       }
+    }
+    .group-check {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      input {
+        @media (max-width: 767px) {
+          margin-top: 4px;
+        }
+      }
+      label {
+        max-width: 70%; 
+        @media (max-width: 980px) {
+          max-width: unset;
+        }
+      }
+      @media (max-width: 767px) {
+        align-items: flex-start;
+      }
+    }
+    @media (max-width: 980px) {
+      max-width: unset;
     }
   }
   @media (max-width: 980px) {
