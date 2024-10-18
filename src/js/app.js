@@ -141,10 +141,24 @@ window.addEventListener("load", () => {
     if (window.innerWidth > 1024) setCardEvents();
   });
 
+  let prevScrollpos = window.scrollY;
+
   window.addEventListener("scroll", ()=> {
     handleScroll();
     activateOnScroll(document.querySelector('.webinar'));
     activateOnScroll(document.querySelector('.knowledge'));
+
+    if(window.innerWidth <= 767) {
+      let currentScrollPos = window.scrollY;
+      if(prevScrollpos > currentScrollPos){
+        header.style.top = "0px";
+      }else if(currentScrollPos == 0){
+        header.style.top = "0px";
+      }else{
+        header.style.top = "-50px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
 
     // Открытие первого аккордеона
     const firstAccordionItem = document.querySelector('.accordion-item');
