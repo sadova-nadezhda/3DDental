@@ -41,12 +41,15 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
+      image-rendering: -moz-crisp-edges; /* Firefox */
+      -ms-interpolation-mode: nearest-neighbor;  /* IE */
+      image-rendering: crisp-edges; /* Стандартное свойство */
     }
     @media(max-width: 767px) {
-      width: 35vw;
+      width: auto;
       height: 20vw;
-      min-width: 139px;
-      min-height: 80px;
+      min-width: unset;
+      min-height: 60px;
     }
   }
   &__user {
@@ -256,10 +259,5 @@
   }
   &.scroll {
     box-shadow: 0 0 24px rgba(34, 30, 31, 0.08);
-    .header__logo {
-      @media(max-width: 767px) {
-        min-height: 60px;
-      }
-    }
   }
 }
