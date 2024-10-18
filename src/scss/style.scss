@@ -144,7 +144,7 @@
     .swiper-pagination {
       top: unset;
       left: 35px;
-      bottom: 15%;
+      bottom: 12%;
       display: flex;
       align-items: center;
       gap: 15px;
@@ -182,7 +182,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 45px;
-    height: 49.3vw;
+    height: 40vw;
     max-height: 710px;
     width: 100%;
     padding: 35px;
@@ -462,6 +462,7 @@
       height: 0;
       margin-top: 0;
       opacity: 0;
+      font-size: 16px;
       transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out, margin-top 0.3s ease-in-out;
       @media(max-width: 1024px) {
         height: auto;
@@ -604,7 +605,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 43.7vw;
+    height: 42vw;
     min-height: 453px;
     max-height: 629px;
     padding: 0 50px;
@@ -971,7 +972,6 @@
     background: var(--dark, $dark);
   }
   &__list {
-    margin-top: 20px;
     li {
       color: var(--dark, $dark);
       background: var(--light, $light);
@@ -1257,7 +1257,7 @@
   }
   &__img {
     max-height: 574px;
-    height: 39.8vw;
+    height: 35vw;
     min-height: 510px;
     border-radius: 20px;
     overflow: hidden;
