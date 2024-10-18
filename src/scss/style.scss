@@ -182,13 +182,14 @@
     flex-direction: column;
     justify-content: center;
     gap: 45px;
-    min-height: 710px;
+    height: 49.3vw;
+    max-height: 710px;
     width: 100%;
     padding: 35px;
     padding-top: 150px;
     @media(max-width: 980px) {
       justify-content: flex-start;
-      min-height: auto;
+      height: auto;
       padding: 0;
     }
     @media(max-width: 767px) {
@@ -231,7 +232,7 @@
     height: 100%;
     width: 42.3vw;
     max-width: 610px;
-    min-width: 333px;
+    min-width: 340px;
     img {
       width: 100%;
       height: 100%;
@@ -321,8 +322,35 @@
 }
 
 .services {
+  position: relative;
   color: var(--light, $light);
   background-color: var(--main-yellow, $main-yellow);
+  overflow: hidden;
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    width: 259px;
+    height: 259px;
+    background: url(../img/tooth-back.svg) center / contain no-repeat;
+    @media(max-width: 767px) {
+      content: none;
+    }
+  }
+  &::before {
+    top: 195px;
+    left: -110px;
+    transform: rotate(-55deg);
+  }
+  &::after {
+    right: -50px;
+    bottom: 120px;
+    width: 278px;
+    height: 278px;
+  }
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
   &__top {
     display: flex;
     flex-wrap: wrap;
@@ -386,7 +414,9 @@
       top: 0;
       left: 0;
       right: 0;
-      height: 295px;
+      min-height: 200px;
+      height: 20.5vw;
+      max-height: 295px;
       width: 100%;
       border-radius: 20px;
       overflow: hidden;
@@ -576,9 +606,11 @@
     flex-direction: column;
     justify-content: flex-end;
     height: 43.7vw;
+    min-height: 453px;
     max-height: 629px;
     padding: 0 50px;
     margin-bottom: 35px;
+    transition: height 0.4s ease-out;
     img {
       position: absolute;
       top: 0;
@@ -587,14 +619,14 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      @media(max-width: 767px) {
+      @media(max-width: 910px) {
         width: calc(100% + 32px);
         height: 453px;
         // margin: 0 -16px;
         border-radius: 15px;
       }
     }
-    @media(max-width: 767px) {
+    @media(max-width: 910px) {
       min-height: 629px;
       padding: 0;
       margin-bottom: 32px;
@@ -619,9 +651,9 @@
       padding: 40px 80px;
     }
     @media(max-width: 1100px) {
-      padding: 40px 40px;
+      padding: 40px;
     }
-    @media(max-width: 767px) {
+    @media(max-width: 910px) {
       align-items: stretch;
       padding: 0;
       border-radius: 0;
@@ -632,7 +664,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    @media(max-width: 767px) {
+    @media(max-width: 910px) {
       flex: 1 1 calc(50% - 4px);
       flex-direction: column;
       align-items: flex-start;
@@ -649,7 +681,7 @@
     @media(max-width: 1380px) {
       font-size: 40px;
     }
-    @media(max-width: 767px) {
+    @media(max-width: 1100px) {
       font-size: 32px;
     }
   }
@@ -658,7 +690,7 @@
     font-size: 20px;
     font-weight: 400;
     line-height: 24px;
-    @media(max-width: 767px) {
+    @media(max-width: 1100px) {
       font-size: 18px;
       line-height: 20px;
     }
@@ -881,8 +913,20 @@
 }
 
 .knowledge {
+  position: relative;
   color: var(--light, $light);
   background-color: var(--main-blue, $main-blue);
+  overflow: hidden;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 188px;
+    height: 188px;
+    background: rgba(255, 255, 255, 0.6);
+    filter: blur(107px);
+  }
   &__container {
     position: relative;
   }
@@ -977,6 +1021,11 @@
       padding: 8px;
     }
   }
+  &.active {
+    &::before {
+      animation: zoom 3s ease-out infinite;
+    }
+  }
 }
 
 .educational {
@@ -1008,23 +1057,17 @@
     gap: 40px;
     padding-bottom: 35px;
     border-bottom: 1px solid var(--dark, $dark);
-    &:last-child {
-      padding-bottom: 0;
-      border-bottom: 0;
-      @media(max-width: 767px) {
-        padding-bottom: 32px;
-        border-bottom: 1px solid var(--dark, $dark);
-      }
-    }
     @media(max-width: 767px) {
       gap: 32px;
       padding-bottom: 32px;
     }
   }
   &__img {
+    max-width: 478px;
     width: 33vw;
     min-height: 280px;
-    // height: 300px;
+    // height: 15.6vw;
+    // max-height: 300px;
     border-radius: 15px;
     overflow: hidden;
     img {
@@ -1033,6 +1076,7 @@
       object-fit: cover;
     }
     @media(max-width: 980px) {
+      max-width: unset;
       width: 100%;
       height: 280px;
     }
@@ -1043,9 +1087,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 35px;
-    width: calc(60vw - 40px);
+    width: 30vw;
     @media(max-width: 1200px) {
       gap: 32px;
+    }
+    @media(max-width: 980px) {
+      width: 100%;
     }
     @media(max-width: 767px) {
       gap: 24px;
@@ -1133,6 +1180,20 @@
 }
 
 .webinar {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 30%;
+    width: 321px;
+    height: 321px;
+    background: rgba(60, 79, 109, 0.30);
+    filter: blur(107px);
+    @media (max-width: 767px) {
+      content: none;
+    }
+  }
   &__container {
     position: relative;
     display: flex;
@@ -1146,6 +1207,9 @@
   }
   &__content {
     width: 33%;
+    @media (max-width: 980px) {
+      width: 45%;
+    }
     @media (max-width: 767px) {
       width: 100%;
     }
@@ -1155,6 +1219,9 @@
     flex-direction: column;
     gap: 32px;
     width: calc(66% - 40px);
+    @media (max-width: 980px) {
+      width: calc(55% - 40px);
+    }
     @media (max-width: 767px) {
       width: 100%;
     }
@@ -1166,13 +1233,16 @@
         bottom: none;
       }
     }
-    @media (max-width: 767px) {
+    @media (max-width: 1200px) {
       margin-bottom: 32px;
     }
   }
   &__desc {
-    max-width: 478px;
+    max-width: 600px;
     margin-bottom: 55px;
+    @media (max-width: 1200px) {
+      margin-bottom: 32px;
+    }
     @media (max-width: 767px) {
       margin-bottom: 0;
     }
@@ -1187,7 +1257,9 @@
     }
   }
   &__img {
-    height: 574px;
+    max-height: 574px;
+    height: 39.8vw;
+    min-height: 510px;
     border-radius: 20px;
     overflow: hidden;
     img {
@@ -1196,7 +1268,7 @@
       object-fit: cover;
     }
     @media (max-width: 767px) {
-      height: 290px;
+      min-height: 291px;
     }
   }
   &__reviews {
@@ -1265,6 +1337,23 @@
     @media (max-width: 767px) {
       gap: 15px;
     }
+  }
+  &.active {
+    &::before {
+      animation: zoom 3s ease-out infinite;
+    }
+  }
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
@@ -1444,16 +1533,32 @@
 }
 
 .feedback {
+  position: relative;
   margin-bottom: -50px;
   padding-bottom: 200px;
   color: var(--light, $light);
-  background-color: var(--main-yellow, $main-yellow);
+  background: url(../img/back.png);
+  background-color: rgba(243, 166, 57, 0.75);
+  overflow: hidden;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 45%;
+    left: -20px;
+    transform: rotate(-45deg);
+    width: 163px;
+    height: 163px;
+    background: url(../img/tooth-back.svg) center / contain no-repeat;
+    @media(max-width: 767px) {
+      content: none;
+    }
+  }
   &__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 55px;
-    @media (max-width: 767px) {
+    @media (max-width: 1200px) {
       gap: 32px;
     }
   }
@@ -1465,7 +1570,7 @@
     strong {
       font-weight: 600;
     }
-    @media (max-width: 980px) {
+    @media (max-width: 1100px) {
       max-width: unset;
       font-size: 32px;
     }
@@ -1474,7 +1579,8 @@
     }
   }
   &__form {
-    max-width: 51.5%;
+    flex-grow: 1;
+    max-width: 50%;
     form {
       display: flex;
       flex-wrap: wrap;
@@ -1492,14 +1598,16 @@
     }
     .form__btn {
       width: 100%;
+      margin-top: 22px;
       @media(max-width: 767px) {
-        margin-top: 16px;
+        margin-top: 20px;
       }
     }
     .group-check {
       display: flex;
       align-items: center;
       gap: 15px;
+      margin-top: 4px;
       input {
         @media (max-width: 767px) {
           margin-top: 4px;
@@ -1510,12 +1618,16 @@
         @media (max-width: 980px) {
           max-width: unset;
         }
+        @media (max-width: 767px) {
+          font-size: 14px;
+        }
       }
       @media (max-width: 767px) {
         align-items: flex-start;
+        margin-top: 16px;
       }
     }
-    @media (max-width: 980px) {
+    @media (max-width: 1100px) {
       max-width: unset;
     }
   }

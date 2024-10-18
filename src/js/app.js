@@ -77,35 +77,13 @@ window.addEventListener("load", () => {
   if (window.innerWidth > 1024) {
     setCardEvents();
   }
+  
 
-  // document.querySelectorAll('.accordion-button').forEach(button => {
-  //   button.addEventListener('click', function() {
-  //     const content = this.nextElementSibling;
-  //     const parent = this.parentElement;
-      
-  //     // Закрываем все аккордеоны
-  //     document.querySelectorAll('.accordion-item').forEach(item => {
-  //       item.classList.remove('active');
-  //       item.querySelector('.accordion-content').style.display = 'none';
-  //     });
-  
-  //     // Если текущий аккордеон не был активен, открываем его
-  //     if (!parent.classList.contains('active')) {
-  //       content.style.display = 'flex';
-  //       parent.classList.add('active');
-  //     }
-  //   });
-  // });
-  
   const accordionButtons = document.querySelectorAll('.accordion-button');
   const accordionItems = document.querySelectorAll('.accordion-item');
   
   if (accordionItems && window.innerWidth > 767) {
-    if (accordionItems.length > 0) {
-      const firstContent = accordionItems[0].querySelector('.accordion-content');
-      accordionItems[0].classList.add('active');
-      firstContent.style.maxHeight = firstContent.scrollHeight + 'px';
-    }
+    // Аккордеоны по клику
     accordionButtons.forEach(button => {
       button.addEventListener('click', function() {
         const content = this.nextElementSibling;
@@ -124,6 +102,20 @@ window.addEventListener("load", () => {
       });
     });
   }
+
+  // AOS animate
+  AOS.init({
+    duration: 1200,
+  });
+
+  const activateOnScroll = (element, offset = 107) => {
+    if (element) {
+      const elementOffsetTop = element.getBoundingClientRect().top + window.scrollY;
+      if (window.scrollY > elementOffsetTop - offset) {
+        element.classList.add('active');
+      }
+    }
+  };
   
   window.addEventListener("resize", () => {
     handleScroll();
@@ -131,5 +123,24 @@ window.addEventListener("load", () => {
     if (window.innerWidth > 1024) setCardEvents();
   });
 
-  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("scroll", ()=> {
+    handleScroll();
+    activateOnScroll(document.querySelector('.webinar'));
+    activateOnScroll(document.querySelector('.knowledge'));
+
+    // Открытие первого аккордеона
+    const firstAccordionItem = document.querySelector('.accordion-item');
+    if (firstAccordionItem && window.innerWidth > 767) {
+      let firstAccordionOffset = firstAccordionItem.getBoundingClientRect().top + window.scrollY;
+
+      if (window.scrollY > firstAccordionOffset - window.innerHeight / 2) {
+        // Открыть первый аккордеон, когда он становится видимым
+        const firstContent = firstAccordionItem.querySelector('.accordion-content');
+        if (!firstAccordionItem.classList.contains('active')) {
+          firstAccordionItem.classList.add('active');
+          firstContent.style.maxHeight = firstContent.scrollHeight + 'px';
+        }
+      }
+    }
+  });
 });

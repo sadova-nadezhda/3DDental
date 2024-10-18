@@ -49,9 +49,9 @@
               <div class="services__desc">В целом, конечно, сложившаяся структура организации обеспечивает актуальность вывода текущих активов.</div>
             </div>
             <div class="services__cards">
-              @@include('html/serviceCard.html')
-              @@include('html/serviceCard.html')
-              @@include('html/serviceCard.html')
+              @@include('html/serviceCard.html', { "index": "100" })
+              @@include('html/serviceCard.html', { "index": "200" })
+              @@include('html/serviceCard.html', { "index": "300" })
             </div>
             <a href="" class="services__link">Все услуги</a>
           </div>
@@ -62,7 +62,7 @@
           <div class="cooperation__container">
             <div class="cooperation__top">
               <h2 class="cooperation__title title-up">Сотрудничество</h2>
-              <div class="cooperation__desc">
+              <div class="cooperation__desc" data-aos="fade-left">
                 <div class="cooperation__caption">В целом, конечно, сложившаяся структура организации обеспечивает актуальность вывода</div>
                 <p>В целом, конечно, сложившаяся структура организации обеспечивает актуальность вывода текущих активов.</p>
               </div>
@@ -70,19 +70,19 @@
             <div class="cooperation__box">
               <img src="@img/cooper.png" alt="cooperation image">
               <div class="cooperation__benefits">
-                <div class="cooperation__item">
+                <div class="cooperation__item" data-aos="fade-up" data-aos-delay="100">
                   <div class="cooperation__num">150+</div>
                   <div class="cooperation__txt">постоянных клиентов</div>
                 </div>
-                <div class="cooperation__item">
+                <div class="cooperation__item" data-aos="fade-up" data-aos-delay="150">
                   <div class="cooperation__num">200+</div>
                   <div class="cooperation__txt">отзывов</div>
                 </div>
-                <div class="cooperation__item">
+                <div class="cooperation__item" data-aos="fade-up" data-aos-delay="200">
                   <div class="cooperation__num">10</div>
                   <div class="cooperation__txt">лет на рынке</div>
                 </div>
-                <div class="cooperation__item">
+                <div class="cooperation__item" data-aos="fade-up" data-aos-delay="250">
                   <div class="cooperation__num">20</div>
                   <div class="cooperation__txt">сотрудников</div>
                 </div>
@@ -174,8 +174,8 @@
               <a href="" class="educational__btn button button_light">Смотреть все</a>
             </div>
             <div class="educational__cards">
-              @@include('html/educationalCard.html') 
-              @@include('html/educationalCard.html') 
+              @@include('html/educationalCard.html', { "index": "100" })
+              @@include('html/educationalCard.html', { "index": "200" })
             </div>
           </div>
         </div>
