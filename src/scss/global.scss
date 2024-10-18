@@ -233,6 +233,7 @@ input:invalid, textarea:invalid {
   input[type=checkbox]:not(.switch):checked,
   input[type=radio]:not(.switch):checked {
     --o: 1;
+    --b: transparent;
   }
   input[type=checkbox] + label,
   input[type=radio] + label {

@@ -45,24 +45,47 @@ window.addEventListener("load", () => {
   const setCardEvents = () => {
     servicesCards.forEach(card => {
       const desc = card.querySelector('.services__card-desc');
-      const fullHeight = desc.scrollHeight;
-
+      
+      const getFullHeight = () => {
+        // Временно делаем элемент видимым для точного вычисления
+        const prevHeight = desc.style.height;
+        const prevOpacity = desc.style.opacity;
+        const prevMarginTop = desc.style.marginTop;
+  
+        desc.style.height = 'auto';
+        desc.style.opacity = '1';
+        desc.style.marginTop = '25px';
+        const fullHeight = desc.scrollHeight;
+  
+        // Возвращаем исходные стили
+        desc.style.height = prevHeight;
+        desc.style.opacity = prevOpacity;
+        desc.style.marginTop = prevMarginTop;
+  
+        return fullHeight;
+      };
+  
       const showDescription = () => {
+        const fullHeight = getFullHeight(); // Вычисляем высоту только при необходимости
         desc.style.height = `${fullHeight}px`;
         desc.style.opacity = '1';
         desc.style.marginTop = '25px';
       };
-
+  
       const hideDescription = () => {
         desc.style.height = '0';
         desc.style.opacity = '0';
         desc.style.marginTop = '0';
       };
-
+  
       card.addEventListener('mouseenter', showDescription);
       card.addEventListener('mouseleave', hideDescription);
     });
   };
+  
+  if (window.innerWidth > 1024) {
+    setCardEvents();
+  }
 
   handleScroll();
   addPadTop();
@@ -73,11 +96,6 @@ window.addEventListener("load", () => {
     window.addEventListener("scroll", closeMenuOnScroll);
     document.addEventListener("click", closeMenuOnClickOutside);
   }
-
-  if (window.innerWidth > 1024) {
-    setCardEvents();
-  }
-  
 
   const accordionButtons = document.querySelectorAll('.accordion-button');
   const accordionItems = document.querySelectorAll('.accordion-item');
@@ -130,16 +148,15 @@ window.addEventListener("load", () => {
 
     // Открытие первого аккордеона
     const firstAccordionItem = document.querySelector('.accordion-item');
-    if (firstAccordionItem && window.innerWidth > 767) {
+    const activeAccordion = document.querySelector('.accordion-item.active'); // Проверяем, есть ли уже открытый аккордеон
+
+    if (firstAccordionItem && !activeAccordion && window.innerWidth > 767) { // Открываем первый аккордеон только если никакой другой не активен
       let firstAccordionOffset = firstAccordionItem.getBoundingClientRect().top + window.scrollY;
 
       if (window.scrollY > firstAccordionOffset - window.innerHeight / 2) {
-        // Открыть первый аккордеон, когда он становится видимым
         const firstContent = firstAccordionItem.querySelector('.accordion-content');
-        if (!firstAccordionItem.classList.contains('active')) {
-          firstAccordionItem.classList.add('active');
-          firstContent.style.maxHeight = firstContent.scrollHeight + 'px';
-        }
+        firstAccordionItem.classList.add('active');
+        firstContent.style.maxHeight = firstContent.scrollHeight + 'px';
       }
     }
   });
