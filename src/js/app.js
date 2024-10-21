@@ -97,8 +97,8 @@ window.addEventListener("load", () => {
     document.addEventListener("click", closeMenuOnClickOutside);
   }
 
-  const accordionButtons = document.querySelectorAll('.accordion-button');
-  const accordionItems = document.querySelectorAll('.accordion-item');
+  const accordionButtons = document.querySelectorAll('.branches__accordion .accordion-button');
+  const accordionItems = document.querySelectorAll('.branches__accordion .accordion-item');
   
   if (accordionItems && window.innerWidth > 767) {
     // Аккордеоны по клику
@@ -120,6 +120,29 @@ window.addEventListener("load", () => {
       });
     });
   }
+
+  // services__accordion
+  document.querySelectorAll(".services__accordion .accordion-header").forEach((button) => {
+    button.addEventListener("click", () => {
+      const accordionContent = button.nextElementSibling;
+
+      button.classList.toggle("active");
+
+      if (button.classList.contains("active")) {
+        accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+      } else {
+        accordionContent.style.maxHeight = 0;
+      }
+
+      // Close other open accordion items
+      document.querySelectorAll(".accordion-header").forEach((otherButton) => {
+        if (otherButton !== button) {
+          otherButton.classList.remove("active");
+          otherButton.nextElementSibling.style.maxHeight = 0;
+        }
+      });
+    });
+  });
 
   // AOS animate
   AOS.init({

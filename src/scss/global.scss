@@ -344,6 +344,9 @@ input:invalid, textarea:invalid {
   line-height: 1;
   font-weight: 600;
   @include transition;
+  @media(max-width: 767px) {
+    width: 100%;
+  }
   &_primary {
     color: var(--light, $light);
     background-color: var(--main-blue, $main-blue);
@@ -360,19 +363,40 @@ input:invalid, textarea:invalid {
     }
   }
   &_more {
+    min-width: unset;
     width: 160px;
     height: 160px;
     border-radius: 100%;
     background-color: var(--light, $light);
-    font-size: 22px;
     &:hover {
       color: var(--light, $light);
       background-color: var(--main-blue, $main-blue);
+    }
+    @media(max-width: 767px) {
+      width: 150px;
+      height: 150px;
     }
   }
   &_link {
     padding: 0;
     color: var(--light-blue, $light-blue);
+    path {
+      transition: fill 0.3s ease-out;
+    }
+    &:hover {
+      color: var(--yellow, $yellow);
+      path {
+        fill: var(--yellow, $yellow);
+      }
+    }
+  }
+  &_back {
+    justify-content: flex-start;
+    padding: 0;
+    color: #0D2548;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 400;
     path {
       transition: fill 0.3s ease-out;
     }
@@ -396,9 +420,6 @@ input:invalid, textarea:invalid {
   }
   &:disabled {
     opacity: 0.5;
-  }
-  @media(max-width: 767px) {
-    width: 100%;
   }
 }
 

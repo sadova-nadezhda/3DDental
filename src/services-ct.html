@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Снимок ЧЛО" })
+  <body>
+    @@include('html/header.html')
+
+    <!-- добавить классы для main "main column" -->
+    <!-- добавить классы для main врачей "main-doctor" -->
+     <!-- добавить классы для main пациента "main-patient" -->
+    <main class="main main-patient">
+      <!-- Хлебные крошки на этой стр отличается -->
+      <section class="breadcrumbs section-top">
+        <div class="container">
+          <div class="breadcrumbs__container">
+            <a href="" class="button button_back">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.24999 9.99998C6.24999 9.84013 6.31109 9.68013 6.43312 9.5581L12.6831 3.3081C12.9273 3.06388 13.3228 3.06388 13.5669 3.3081C13.8109 3.55232 13.8111 3.94779 13.5669 4.19185L7.75874 9.99998L13.5669 15.8081C13.8111 16.0523 13.8111 16.4478 13.5669 16.6919C13.3226 16.9359 12.9272 16.9361 12.6831 16.6919L6.43312 10.4419C6.31109 10.3198 6.24999 10.1598 6.24999 9.99998Z" fill="black"/>
+              </svg>          
+              <span>Все исследования</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="services-ct services-ct-page section-pad-bottom">
+        <div class="container">
+          <div class="services-ct__container">
+            <h1 class="services-ct__title services-ct-page__title title-up title-color">КТ двух челюстей <strong>в Астане</strong></h1>
+            <div class="services-ct__gallery">
+              <div class="services-ct__image"><img src="@img/services-ct-1.png" alt=""></div>
+              <div class="services-ct__image"><img src="@img/services-ct-2.png" alt=""></div>
+              <div class="services-ct__image"><img src="@img/services-ct-3.png" alt=""></div>
+            </div>
+            <div class="services-inner__desc services-ct__desc">
+              <p>Идейные соображения высшего порядка, а также курс на социально-ориентированный национальный проект играет важную роль в формировании новых предложений. Являясь всего лишь частью общей картины, акционеры крупнейших компаний представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть своевременно верифицированы. Но разбавленное изрядной долей эмпатии, рациональное мышление способствует подготовке и реализации переосмысления внешнеэкономических политик.</p>
+              <p>Наше дело не так однозначно, как может показаться: консультация с широким активом не даёт нам иного выбора, кроме определения новых принципов формирования материально-технической и кадровой базы. Картельные сговоры не допускают ситуации, при которой реплицированные с зарубежных источников, современные исследования будут ассоциативно распределены по отраслям.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="services-price section-pad-bottom">
+        <div class="container">
+          <div class="services-price__container">
+            <h2 class="services-price__title title-up">Стоимость услуги</h2>
+            <div class="services-price__cards">
+              @@include('html/servicesPriceCard.html') 
+              @@include('html/servicesPriceCard.html')
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="services-combo section-pad-bottom">
+        <div class="container">
+          <div class="services-combo__container">
+            <h2 class="services-combo__title title-up">Комбо исследования помогут сэкономить</h2>
+            <div class="services-combo__slider">
+              <div class="swiper comboSwiper">
+                <div class="swiper-wrapper">
+                  @@include('html/servicesComboCard.html') 
+                  @@include('html/servicesComboCard.html') 
+                  @@include('html/servicesComboCard.html') 
+                </div>
+                <div class="swiper-button-next combo-button-next">
+                  <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.8008 6.51173L13.957 0.621104C13.6875 0.351573 13.25 0.347667 12.9805 0.617198C12.7109 0.886729 12.707 1.32423 12.9766 1.59376L17.6523 6.3086H0.691406C0.308594 6.3086 0 6.6172 0 7.00001C0 7.38282 0.308594 7.69142 0.691406 7.69142H17.6523L12.9766 12.4063C12.707 12.6758 12.7109 13.1133 12.9805 13.3828C13.25 13.6524 13.6875 13.6484 13.957 13.3789L19.8008 7.48829C20.0664 7.21876 20.0664 6.78126 19.8008 6.51173Z" fill="#312D2D"/>
+                  </svg>                    
+                </div>
+                <div class="swiper-button-prev combo-button-prev">
+                  <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.199219 7.48827L6.04297 13.3789C6.3125 13.6484 6.75 13.6523 7.01953 13.3828C7.28906 13.1133 7.29297 12.6758 7.02344 12.4062L2.34766 7.6914L19.3086 7.6914C19.6914 7.6914 20 7.3828 20 6.99999C20 6.61718 19.6914 6.30858 19.3086 6.30858L2.34766 6.30858L7.02344 1.59374C7.29297 1.32421 7.28906 0.886708 7.01953 0.617177C6.75 0.347646 6.3125 0.351552 6.04297 0.621084L0.199219 6.51171C-0.0664062 6.78124 -0.0664062 7.21874 0.199219 7.48827Z" fill="#312D2D"/>
+                  </svg>                                       
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <section class="services-training section-pad">
+        <div class="container">
+          <div class="services-training__container">
+            <h2 class="services-training__title title-up">Как подготовиться?</h2>
+            <div class="services-training__cards">
+              @@include('html/servicesTrainingCard.html', { "num": "1" }) 
+              @@include('html/servicesTrainingCard.html', { "num": "2" }) 
+              @@include('html/servicesTrainingCard.html', { "num": "3" }) 
+              @@include('html/servicesTrainingCard.html', { "num": "4" }) 
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="services-research section-pad">
+        <div class="container">
+          <div class="services-research__container">
+            <h2 class="services-research__title title-up">Об исследовании</h2>
+            <div class="services-research__cards">
+              <div class="services-research__card">
+                <h4 class="services-research__caption">Лучевая нагрузка</h4>
+                <div class="services-research__num"><span>0,015</span> мкЗв</div>
+                <div class="services-research__desc">
+                  <p>Прежде всего, высококачественный прототип будущего проекта не даёт нам иного выбора, кроме определения своевременного выполнения сверхзадачи.</p>
+                </div>
+              </div>
+              <div class="services-research__card">
+                <h4 class="services-research__caption">Показания к назначению</h4>
+                <div class="services-research__desc">
+                  <ul>
+                    <li>Оценка анатомии корневых каналов до и после терапевтического стоматологического лечения</li>
+                    <li>Послеоперационный контроль положения имплантатов</li>
+                    <li>Визуализация положения не прорезавшихся наружу зубов</li>
+                    <li>Скрытые кариозные поражения коронковой части зуба</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="services-diagnostics section-pad-bottom">
+        <div class="container">
+          <div class="services-diagnostics__container">
+            <h2 class="services-diagnostics__title title-up">Как проходит диагностика?</h2>
+            <a class="services-diagnostics__video" href="">
+              <img src="@img/diagn.png" alt="">
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>

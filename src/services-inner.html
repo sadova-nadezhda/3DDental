@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Снимок ЧЛО" })
+  <body>
+    @@include('html/header.html')
+
+    <!-- добавить классы для main "main column" -->
+    <!-- добавить классы для main врачей "main-doctor" -->
+     <!-- добавить классы для main пациента "main-patient" -->
+    <main class="main main-doctor column">
+      @@include('html/breadcrumbs.html', { "title": "Снимок ЧЛО" }) 
+      <div class="container">
+        <div class="main__container">
+          <div class="sections">
+            <section class="services-inner section-pad-bottom">
+              <div class="services-inner__container">
+                <h1 class="services-inner__title title-up">Снимок челюстно-лицевой области</h1>
+                <div class="services-inner__gallery">
+                  <div class="services-inner__img"><img src="@img/services-inner-1.png" alt=""></div>
+                  <div class="services-inner__img"><img src="@img/services-inner-2.png" alt=""></div>
+                </div>
+                <div class="services-inner__desc">
+                  <p>Идейные соображения высшего порядка, а также курс на социально-ориентированный национальный проект играет важную роль в формировании новых предложений. Являясь всего лишь частью общей картины, акционеры крупнейших компаний представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть своевременно верифицированы. Но разбавленное изрядной долей эмпатии, рациональное мышление способствует подготовке и реализации переосмысления внешнеэкономических политик.</p>
+                  <p>Идейные соображения высшего порядка, а также курс на социально-ориентированный национальный проект играет важную роль в формировании новых предложений. Являясь всего лишь частью общей картины, акционеры крупнейших компаний представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть своевременно верифицированы. Но разбавленное изрядной долей эмпатии, рациональное мышление способствует подготовке и реализации переосмысления внешнеэкономических политик.</p>
+                </div>
+              </div>
+            </section>
+            <section class="services-ct section-pad-bottom">
+              <div class="services-ct__container">
+                <h3 class="services-ct__title title-up">Компьютерная томография (3D)</h3>
+                <div class="services-ct__cards">
+                  @@include('html/servicesCtCard.html') 
+                  @@include('html/servicesCtCard.html')
+                  @@include('html/servicesCtCard.html')
+                  @@include('html/servicesCtCard.html')
+                </div>
+              </div>
+            </section>
+          </div>
+          <aside class="aside">
+            <h3 class="aside__caption title-up">Услуги клиники</h3>
+            <ul class="aside__list">
+              <li><a href="">Диагностика ЧЛО</a></li>
+              <li><a href="">Диагностика ВНЧС</a></li>
+              <li><a href="">Диагностика ЛОР</a></li>
+              <li><a href="">Комбо исследования</a></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>

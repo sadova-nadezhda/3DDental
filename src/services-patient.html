@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Услуги" })
+  <body>
+    @@include('html/header.html')
+
+    <main>
+      @@include('html/breadcrumbs.html', { "title": "Услуги" }) 
+      <section class="services-page section-pad-bottom">
+        <div class="container">
+          <div class="services-page__container">
+            <div class="services-page__top">
+              <h1 class="services-page__title">Услуги</h1>
+              <div class="services-page__desc">
+                В целом, конечно, сложившаяся структура организации обеспечивает актуальность вывода текущих активов.
+              </div>
+            </div>
+            <div class="services__accordion accordion-container">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  Снимок челюстно-лицевой области
+                  <span class="icon">
+                    <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.88975 1.5625C7.68255 1.5625 7.48383 1.64481 7.33732 1.79132C7.19081 1.93784 7.1085 2.13655 7.1085 2.34375C7.1085 2.55095 7.19081 2.74966 7.33732 2.89618C7.48383 3.04269 7.68255 3.125 7.88975 3.125H21.6288L2.6499 22.1039C2.34489 22.409 2.34489 22.9036 2.6499 23.2087C2.95499 23.5137 3.44959 23.5137 3.75467 23.2087L22.7336 4.22977V17.9688C22.7336 18.176 22.8159 18.3747 22.9624 18.5213C23.1089 18.6678 23.3076 18.7501 23.5148 18.7501C23.722 18.7501 23.9207 18.6678 24.0673 18.5213C24.2138 18.3747 24.2961 18.176 24.2961 17.9688V2.34383C24.2961 2.13663 24.2137 1.93793 24.0672 1.79142C23.9207 1.64492 23.722 1.5626 23.5148 1.56258L7.88975 1.5625Z" fill="#3C4F6D"/>
+                    </svg>                      
+                  </span>
+                </h3>
+                <div class="accordion-content">
+                  <div class="accordion-col accordion-txt">
+                    <p>В целом, конечно, сложившаяся структура организации обеспечивает актуальность вывода текущих активов.</p>
+                    <img src="@img/service-inner-1.png" alt="">
+                  </div>
+                  <div class="accordion-col accordion-img">
+                    <img src="@img/service-inner-2.png" alt="">
+                  </div>
+                  <a href="#" class="accordion-content__btn button button_more">Подробнее</a>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  Снимок Височно-нижнечелюстных суставов
+                  <span class="icon">
+                    <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.88975 1.5625C7.68255 1.5625 7.48383 1.64481 7.33732 1.79132C7.19081 1.93784 7.1085 2.13655 7.1085 2.34375C7.1085 2.55095 7.19081 2.74966 7.33732 2.89618C7.48383 3.04269 7.68255 3.125 7.88975 3.125H21.6288L2.6499 22.1039C2.34489 22.409 2.34489 22.9036 2.6499 23.2087C2.95499 23.5137 3.44959 23.5137 3.75467 23.2087L22.7336 4.22977V17.9688C22.7336 18.176 22.8159 18.3747 22.9624 18.5213C23.1089 18.6678 23.3076 18.7501 23.5148 18.7501C23.722 18.7501 23.9207 18.6678 24.0673 18.5213C24.2138 18.3747 24.2961 18.176 24.2961 17.9688V2.34383C24.2961 2.13663 24.2137 1.93793 24.0672 1.79142C23.9207 1.64492 23.722 1.5626 23.5148 1.56258L7.88975 1.5625Z" fill="#3C4F6D"/>
+                    </svg>                      
+                  </span>
+                </h3>
+                <div class="accordion-content">
+                  <div class="accordion-col accordion-txt">
+                    <p>В целом, конечно, сложившаяся структура организации обеспечивает актуальность вывода текущих активов.</p>
+                    <img src="@img/service-inner-1.png" alt="">
+                  </div>
+                  <div class="accordion-col accordion-img">
+                    <img src="@img/service-inner-2.png" alt="">
+                  </div>
+                  <a href="#" class="accordion-content__btn button button_more">Подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      @@include('html/benefits.html') 
+      @@include('html/reviews.html') 
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>

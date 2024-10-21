@@ -67,4 +67,12 @@ export function initializeSwipers() {
       },
     });
   }
+  const comboSwiper = new Swiper(".comboSwiper", {
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    navigation: {
+      nextEl: ".combo-button-next",
+      prevEl: ".combo-button-prev",
+    },
+  });
 }
