@@ -3,8 +3,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9;
-  background-color: var(--bg, $bg);
+  z-index: 99;
   @include transition;
   &__container {
     display: flex;
@@ -258,6 +257,7 @@
     }
   }
   &.scroll {
+    background-color: var(--bg, $bg);
     box-shadow: 0 0 24px rgba(34, 30, 31, 0.08);
   }
 }

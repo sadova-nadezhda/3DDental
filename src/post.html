@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Снимок ЧЛО" })
+  <body>
+    @@include('html/header.html')
+
+    <main>
+      <section class="post-hero section-top section-pad-bottom">
+        <div class="container">
+          <div class="post-hero__container">
+            <h1 class="post-hero__title title-up">Блог <br> Для Врачей</h1>
+            <div class="post-hero__slider">
+              <div class="swiper postSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide post-hero__slide"><img src="@img/post-slide.png" alt=""></div>
+                  <div class="swiper-slide post-hero__slide"><img src="@img/post-slide.png" alt=""></div>
+                </div>
+                <div class="swiper-button-next post-hero-button post-hero-button-next">
+                  <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.3984 11.5078C12.6719 11.2344 12.6719 10.7656 12.3984 10.4922L2.20312 0.257812C2.04687 0.140625 1.89062 0.0625 1.69531 0.0625C1.5 0.0625 1.30469 0.140625 1.1875 0.257812C0.914062 0.53125 0.914062 1 1.1875 1.27344L10.875 11L1.14844 20.6875C1.03125 20.8438 0.953125 21 0.953125 21.1953C0.953125 21.3906 1.03125 21.5859 1.14844 21.7031C1.26562 21.8203 1.5 21.9375 1.69531 21.9375C1.89062 21.9375 2.08594 21.8594 2.20312 21.7422L12.3984 11.5078Z" fill="#312D2D"/>
+                    <path d="M11.3438 1.3125L21.0312 11L11.3438 20.6875C11.1875 20.8438 11.1094 21 11.1094 21.1953C11.1094 21.3906 11.1875 21.5859 11.3047 21.7031C11.4219 21.8203 11.6563 21.9375 11.8516 21.9375C12.0469 21.9375 12.2422 21.8594 12.3594 21.7422L22.5547 11.5469C22.8281 11.2734 22.8281 10.8047 22.5547 10.5312L12.3594 0.335938C12.2031 0.179688 12.0469 0.140625 11.8516 0.140625C11.6563 0.140625 11.4609 0.21875 11.3438 0.335938C11.0313 0.570312 11.0313 1 11.3438 1.3125Z" fill="#312D2D"/>
+                  </svg>                    
+                </div>
+                <div class="swiper-pagination post-hero-pagination"></div>
+                <div class="swiper-button-prev post-hero-button post-hero-button-prev">
+                  <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.6562 20.6875L1.96875 11L11.6562 1.3125C11.8125 1.15625 11.8906 1 11.8906 0.804688C11.8906 0.609375 11.8125 0.414062 11.6953 0.296875C11.5781 0.179687 11.3437 0.0625 11.1484 0.0625C10.9531 0.0625 10.7578 0.140625 10.6406 0.257813L0.445313 10.4531C0.171876 10.7266 0.171876 11.1953 0.445313 11.4688L10.6406 21.6641C10.7969 21.8203 10.9531 21.8594 11.1484 21.8594C11.3437 21.8594 11.5391 21.7812 11.6562 21.6641C11.9687 21.4297 11.9687 21 11.6562 20.6875Z" fill="#312D2D"/>
+                  </svg>                    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="post section-pad-bottom">
+        <div class="container">
+          <div class="post__container">
+            <h2 class="post__title title-up">новости</h2>
+            <div class="post__cards">
+              @@include('html/postCard.html') 
+              @@include('html/postCard.html') 
+              @@include('html/postCard.html') 
+            </div>
+            <div class="pagination">
+              <a href="" class="page-numbers prev">
+                <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.199219 7.48827L6.04297 13.3789C6.3125 13.6484 6.75 13.6523 7.01953 13.3828C7.28906 13.1133 7.29297 12.6758 7.02344 12.4062L2.34766 7.6914L19.3086 7.6914C19.6914 7.6914 20 7.3828 20 6.99999C20 6.61718 19.6914 6.30858 19.3086 6.30858L2.34766 6.30858L7.02344 1.59374C7.29297 1.32421 7.28906 0.886708 7.01953 0.617177C6.75 0.347646 6.3125 0.351552 6.04297 0.621084L0.199219 6.51171C-0.0664062 6.78124 -0.0664062 7.21874 0.199219 7.48827Z" fill="#312D2D"/>
+                </svg>                  
+              </a>
+              <span class="page-numbers current">1</span>
+              <a href="" class="page-numbers">2</a>
+              <a href="" class="page-numbers">3</a>
+              <span class="page-numbers dots">...</span>
+              <a href="" class="page-numbers">10</a>
+              <a href="" class="page-numbers next">
+                <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19.8008 6.51173L13.957 0.621104C13.6875 0.351573 13.25 0.347667 12.9805 0.617198C12.7109 0.886729 12.707 1.32423 12.9766 1.59376L17.6523 6.3086H0.691406C0.308594 6.3086 0 6.6172 0 7.00001C0 7.38282 0.308594 7.69142 0.691406 7.69142H17.6523L12.9766 12.4063C12.707 12.6758 12.7109 13.1133 12.9805 13.3828C13.25 13.6524 13.6875 13.6484 13.957 13.3789L19.8008 7.48829C20.0664 7.21876 20.0664 6.78126 19.8008 6.51173Z" fill="#312D2D"/>
+                </svg>                  
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>
