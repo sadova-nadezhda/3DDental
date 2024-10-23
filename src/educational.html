@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Учебный центр" })
+  <body>
+    @@include('html/header.html')
+
+    <main>
+      @@include('html/breadcrumbs.html', { "title": "Учебный центр" }) 
+      <section class="educational-page section-pad-bottom">
+        <div class="container">
+          <div class="educational-page__container">
+            <div class="educational-page__top">
+              <h1 class="educational-page__title title-up">Учебный центр</h1>
+              <div class="educational-page__desc">Предварительные выводы неутешительны: экономическая повестка сегодняшнего дня прекрасно подходит для реализации модели развития!</div>
+              <button class="educational-page__btn button button_light">Оставить заявку</button>
+            </div>
+            <div class="educational-page__cards">
+              <div class="educational-page__card">
+                <span class="num">01</span>
+                <div class="educational-page__box">
+                  <h3 class="educational-page__caption">Курс мероприятие</h3>
+                  <!-- max кол-во символов -->
+                  <div class="educational-page__txt">Как принято считать, интерактивные прототипы объективно рассмотрены соответствующими инстанциями.</div>
+                  <a href="" class="educational-page__link">
+                    <span>Подробнее</span>
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M4.29688 12.8906C4.08113 12.8906 3.90625 12.7157 3.90625 12.5C3.90625 12.2843 4.08113 12.1093 4.29688 12.1093L20.0041 12.1093L14.4211 6.52622C14.2685 6.37368 14.2685 6.12634 14.4211 5.9738C14.5736 5.82124 14.8209 5.82124 14.9735 5.9738L20.8092 11.8095C21.1904 12.1908 21.1904 12.8092 20.8092 13.1905L14.9735 19.0262C14.8209 19.1788 14.5736 19.1788 14.4211 19.0262C14.2685 18.8737 14.2685 18.6263 14.4211 18.4738L20.0043 12.8906L4.29688 12.8906Z" fill="#312D2D"/>
+                    </svg>                      
+                  </a>
+                </div>
+                <a class="educational-page__video video" href=""><img src="@img/educational-2.png" alt=""></a>
+                <div class="educational-page__meta">20 августа 17:00</div>
+              </div>
+              <div class="educational-page__card">
+                <span class="num">02</span>
+                <div class="educational-page__box">
+                  <h3 class="educational-page__caption">Курс мероприятие</h3>
+                  <!-- max кол-во символов -->
+                  <div class="educational-page__txt">Как принято считать, интерактивные прототипы объективно рассмотрены соответствующими инстанциями.</div>
+                  <a href="" class="educational-page__link">
+                    <span>Подробнее</span>
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M4.29688 12.8906C4.08113 12.8906 3.90625 12.7157 3.90625 12.5C3.90625 12.2843 4.08113 12.1093 4.29688 12.1093L20.0041 12.1093L14.4211 6.52622C14.2685 6.37368 14.2685 6.12634 14.4211 5.9738C14.5736 5.82124 14.8209 5.82124 14.9735 5.9738L20.8092 11.8095C21.1904 12.1908 21.1904 12.8092 20.8092 13.1905L14.9735 19.0262C14.8209 19.1788 14.5736 19.1788 14.4211 19.0262C14.2685 18.8737 14.2685 18.6263 14.4211 18.4738L20.0043 12.8906L4.29688 12.8906Z" fill="#312D2D"/>
+                    </svg>                      
+                  </a>
+                </div>
+                <a class="educational-page__video video" href=""><img src="@img/educational-2.png" alt=""></a>
+                <div class="educational-page__meta">20 августа 17:00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="invite section-pad-bottom">
+        <div class="container">
+          <div class="invite__container">
+            <h2 class="invite__title title-up title-color">Приглашаем <strong>тебя</strong> в наш центр</h2>
+            <a class="invite__video video" href="">
+              <img src="@img/diagn.png" alt="">
+            </a>
+          </div>
+        </div>
+      </section>
+      @@include('html/webinar.html')
+    </main>
+    @@include('html/footer.html')
+    @@include('html/foot.html')
+  </body>
+</html>
