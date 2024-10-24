@@ -102,4 +102,23 @@ export function initializeSwipers() {
         },
       },
   });
+  const assistantSwiper = new Swiper(".assistantSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".assistant-button-next",
+      prevEl: ".assistant-button-prev",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      981: {
+        slidesPerView: 3,
+      },
+      1201: {
+        slidesPerView: 4,
+      }
+    }
+  });
 }

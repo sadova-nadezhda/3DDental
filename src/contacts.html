@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Контакты" })
+  <body>
+    @@include('html/header.html')
+
+    <main>
+      @@include('html/breadcrumbs.html', { "title": "Контакты" }) 
+      <section class="contacts section-pad-bottom">
+        <div class="container">
+          <div class="contacts__container">
+            <h1 class="contacts__title">Контакты</h1>
+            <div class="contacts__tabs tabs">
+              <div class="tab active" data-tab-content="tab1-content">Астана</div>
+              <div class="tab" data-tab-content="tab2-content">Караганда</div>
+              <div class="tab" data-tab-content="tab3-content">Шымкент</div>
+            </div>
+            <div class="contacts__content tab-content">
+              <div class="tab-content-item active" id="tab1-content">
+                <div class="tab-content-info">
+                  <div class="tab-content-col">
+                    <span>Наши филиалы</span>
+                    <p>р. Астана, 12</p>
+                    <p>р. Кабанбай батыр, 12</p>
+                    <p>р. Кабанбай батыр, 12</p>
+                  </div>
+                  <div class="tab-content-col">
+                    <span>Номер телефона</span>
+                    <a href="tel:+7 701 224 2430">+7 701 224 2430</a>
+                  </div>
+                  <div class="tab-content-col">
+                    <span>Почта</span>
+                    <a href="mailto:3dtomograph@gmail.com">3dtomograph@gmail.com</a>
+                  </div>
+                </div>
+                <a class="tab-content-map"><img src="@img/map.png" alt=""></a>
+              </div>
+              <div class="tab-content-item" id="tab2-content">
+                <div class="tab-content-info">
+                  <div class="tab-content-col">
+                    <span>Наши филиалы</span>
+                    <p>р. Караганда, 12</p>
+                    <p>р. Кабанбай батыр, 12</p>
+                    <p>р. Кабанбай батыр, 12</p>
+                  </div>
+                  <div class="tab-content-col">
+                    <span>Номер телефона</span>
+                    <a href="tel:+7 701 224 2430">+7 701 224 2430</a>
+                  </div>
+                  <div class="tab-content-col">
+                    <span>Почта</span>
+                    <a href="mailto:3dtomograph@gmail.com">3dtomograph@gmail.com</a>
+                  </div>
+                </div>
+                <a class="tab-content-map"><img src="@img/map.png" alt=""></a>
+              </div>
+              <div class="tab-content-item" id="tab3-content">
+                <div class="tab-content-info">
+                  <div class="tab-content-col">
+                    <span>Наши филиалы</span>
+                    <p>р. Шымкент, 12</p>
+                    <p>р. Кабанбай батыр, 12</p>
+                    <p>р. Кабанбай батыр, 12</p>
+                  </div>
+                  <div class="tab-content-col">
+                    <span>Номер телефона</span>
+                    <a href="tel:+7 701 224 2430">+7 701 224 2430</a>
+                  </div>
+                  <div class="tab-content-col">
+                    <span>Почта</span>
+                    <a href="mailto:3dtomograph@gmail.com">3dtomograph@gmail.com</a>
+                  </div>
+                </div>
+                <a class="tab-content-map"><img src="@img/map.png" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      @@include('html/feedback.html') 
+    </main>
+
+    @@include('html/footer.html') 
+    @@include('html/foot.html')
+  </body>
+</html>
