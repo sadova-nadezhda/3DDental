@@ -149,6 +149,9 @@ window.addEventListener("load", () => {
     duration: 1200,
   });
 
+  // Fancybox
+  Fancybox.bind("[data-fancybox]");
+
   // tabs
 
   const tabs = document.querySelectorAll('.tab');
@@ -175,6 +178,141 @@ window.addEventListener("load", () => {
       }
     }
   };
+
+  // custom select cities
+  $(function () {
+    oCts.init();
+  });
+  
+  let oCts = {
+    eBlock: null,
+    eBtn: null,
+    eList: null,
+    cities: null,
+    init: function () {
+      (this.eBlock = $(".cities-select")),
+        (this.eList = oCts.eBlock.children("ul")),
+        (this.eBtn = oCts.eBlock.children("div")),
+        this.onChg();
+        this.eBtn.text(oCts.eList.find(".active a").text()
+      );
+      $(document).click(function (e) {
+        if ($(e.target).is(oCts.eBtn)) {
+          // Div
+          if (oCts.eBlock.hasClass("open")) oCts.hide();
+          else oCts.show();
+        } else if (
+          $(e.target).is(oCts.eList.find("a")) &&
+          oCts.eBlock.hasClass("open")
+        ) {
+          // Link
+          oCts.eBtn.text($(e.target).text());
+          $(e.target).parent().siblings().removeClass("active");
+          $(e.target).parent().addClass("active");
+          oCts.onChg();
+          oCts.hide();
+        } else if (oCts.eBlock.hasClass("open")) {
+          // Without lng
+          oCts.hide();
+        }
+      });
+    },
+    show: function () {
+      oCts.eBlock.addClass("open");
+      oCts.eList.stop().slideDown(150);
+    },
+    hide: function () {
+      oCts.eBlock.removeClass("open");
+      oCts.eList.stop().slideUp(150);
+    },
+    onChg: function () {
+      oCts.cities = oCts.eList.find(".active a").data("cities");
+      // console.info("Current language: " + oCts.lang);
+    }
+  };
+
+  // Modals
+  function hidePopup(popup) {
+    popup.addEventListener('click', function(e) {
+      const target = e.target;
+      if (
+        target.classList.contains("modal__close") ||
+        target.classList.contains("modals")
+      ) {
+        popup.style.transition = "opacity 0.4s";
+        popup.style.opacity = "0";
+        setTimeout(() => {
+          popup.style.display = "none";
+          body.classList.remove('modal-open')
+        }, 400);
+      }
+    });
+  }
+  function showPopup(popup) {
+    popup.style.display = "flex";
+    setTimeout(() => {
+      body.classList.add('modal-open')
+      popup.style.transition = "opacity 0.4s";
+      popup.style.opacity = "1";
+    }, 10);
+  } 
+
+  let body = document.querySelector('body')
+  let modals = document.querySelector('.modals')
+  let modalAll = document.querySelectorAll('.modal')
+  let modalBtns = document.querySelectorAll(".modal-btn");
+  let modalBranch = document.querySelector('.modal-branch')
+  setTimeout(() => {
+    showPopup(modals)
+    modalBranch.style.display = 'block';
+  }, 3000);
+  if(modals && modalBtns){
+    hidePopup(modals);
+    modalBtns.forEach( btn => {
+      btn.addEventListener('click', () => {
+        showPopup(modals)
+        let typeBtn = btn.dataset.type;
+        modalAll.forEach( modal => {
+          let typeModal = modal.dataset.type;
+          modal.style.display = 'none'
+          if(typeBtn == typeModal) {
+            modal.style.display = 'block'
+          }
+        });
+      })
+    })
+  }
+
+  // file input
+
+  const inputFile = document.querySelector("#picture__input");
+  const pictureBox = document.querySelector(".picture");
+  const pictureImage = document.querySelector(".picture__image");
+  const pictureImageTxt = "";
+  const img = document.createElement("img");
+  img.classList.add("picture__img");
+  img.src = 'img/file.svg';
+  pictureImage.appendChild(img);
+
+  inputFile.addEventListener("change", function (e) {
+    const inputTarget = e.target;
+    const file = inputTarget.files[0];
+
+    if (file) {
+      const reader = new FileReader();
+      reader.addEventListener("load", function (e) {
+        const readerTarget = e.target;
+        img.src = readerTarget.result;
+        pictureBox.style.padding = 0;
+        img.style.objectFit = 'cover';
+      });
+      reader.readAsDataURL(file);
+    } else {
+      img.src = 'img/file.svg';
+      img.style.objectFit = 'contain';
+      pictureBox.style.padding = `15px`;
+    }
+  });
   
   window.addEventListener("resize", () => {
     handleScroll();

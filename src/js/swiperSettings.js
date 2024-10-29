@@ -70,6 +70,10 @@ export function initializeSwipers() {
   const comboSwiper = new Swiper(".comboSwiper", {
     slidesPerView: "auto",
     spaceBetween: 30,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     navigation: {
       nextEl: ".combo-button-next",
       prevEl: ".combo-button-prev",
@@ -87,11 +91,14 @@ export function initializeSwipers() {
         translate: ["100%", 0, 0],
       },
     },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     navigation: false,
     pagination: {
       el: ".swiper-pagination",
     },
-
     breakpoints: {
         1024: {
           navigation: {
@@ -105,6 +112,10 @@ export function initializeSwipers() {
   const assistantSwiper = new Swiper(".assistantSwiper", {
     slidesPerView: 1,
     spaceBetween: 20,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
     navigation: {
       nextEl: ".assistant-button-next",
       prevEl: ".assistant-button-prev",
@@ -120,5 +131,27 @@ export function initializeSwipers() {
         slidesPerView: 4,
       }
     }
+  });
+  const equipmentSwiper = new Swiper(".equipmentSwiper", {
+    effect: "fade",
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".equipment-button-next",
+      prevEl: ".equipment-button-prev",
+    },
+  });
+  const surveySwiper = new Swiper(".surveySwiper", {
+    // effect: "fade",
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".survey-button-next",
+      prevEl: ".survey-button-prev",
+    },
   });
 }

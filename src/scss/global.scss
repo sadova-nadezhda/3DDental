@@ -65,6 +65,10 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   background-color: var(--bg, $bg);
+  &.modal-open {
+    height: 100dvh;
+    overflow-y: hidden;
+  }
 }
 
 ::-webkit-scrollbar {
