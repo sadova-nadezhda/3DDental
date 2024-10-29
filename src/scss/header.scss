@@ -265,14 +265,15 @@
 .cities-select {
 	position: relative;
 	display: block;
-  min-width: 112px;
+  // min-width: 112px;
   width: fit-content;
+  padding-left: 25px;
   list-style: none;
   &::before {
     content: '';
     position: absolute;
     top: 50%;
-    right: calc(100% + 5px);
+    left: 0;
     transform: translateY(-50%);
     width: 20px;
     height: 20px;
@@ -281,7 +282,7 @@
 }
 .cities-select ul {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 5px);
   left: 0;
   right: 0;
   display: none;

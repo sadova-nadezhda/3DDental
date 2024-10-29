@@ -1,5 +1,3 @@
-import { initializeSwipers } from './swiperSettings.js';
-
 window.addEventListener("load", () => {
   const header = document.querySelector("header");
   const sectionTop = document.querySelector('.section-top');
@@ -89,7 +87,6 @@ window.addEventListener("load", () => {
 
   handleScroll();
   addPadTop();
-  initializeSwipers();
 
   if (menu && link) {
     link.addEventListener("click", toggleMenu);
@@ -97,11 +94,157 @@ window.addEventListener("load", () => {
     document.addEventListener("click", closeMenuOnClickOutside);
   }
 
-  const accordionButtons = document.querySelectorAll('.branches__accordion .accordion-button');
-  const accordionItems = document.querySelectorAll('.branches__accordion .accordion-item');
+  // swipers
+  const heroSwiper = new Swiper(".heroSwiper", {
+    effect: "fade",
+    loop: true,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".hero-pagination",
+      clickable: true,
+    },
+  });
+  const reviewsSwiper = new Swiper(".reviewsSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    centeredSlides: true,
+    loop: true,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".reviews-button-next",
+      prevEl: ".reviews-button-prev",
+    },
+    breakpoints: {
+      767: {
+        slidesPerView: 1.5,
+      },
+      980: {
+        slidesPerView: 2,
+      },
+      1200: {
+        slidesPerView: 2.5,
+      }
+    }
+  });
+  const knowledgeSwiper = new Swiper(".knowledgeSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".knowledge-button-next",
+      prevEl: ".knowledge-button-prev",
+    },
+    breakpoints: {
+      980: {
+        slidesPerView: 2,
+      },
+      1200: {
+        slidesPerView: 3,
+      }
+    }
+  });
+  const comboSwiper = new Swiper(".comboSwiper", {
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".combo-button-next",
+      prevEl: ".combo-button-prev",
+    },
+  });
+  const postSwiper = new Swiper(".postSwiper", {
+    effect: "fade",
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".post-hero-button-next",
+      prevEl: ".post-hero-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+  const assistantSwiper = new Swiper(".assistantSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".assistant-button-next",
+      prevEl: ".assistant-button-prev",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      981: {
+        slidesPerView: 3,
+      },
+      1201: {
+        slidesPerView: 4,
+      }
+    }
+  });
+  const equipmentSwiper = new Swiper(".equipmentSwiper", {
+    effect: "fade",
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".equipment-button-next",
+      prevEl: ".equipment-button-prev",
+    },
+  });
+  const surveySwiper = new Swiper(".surveySwiper", {
+    // effect: "fade",
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".survey-button-next",
+      prevEl: ".survey-button-prev",
+    },
+  });
+
+  let branchesSwiper = null;
+
+  function initSwiper() {
+    if (window.innerWidth < 768 && !branchesSwiper) {
+      branchesSwiper = new Swiper('.accordion-slider', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      });
+    } else if (window.innerWidth >= 768 && branchesSwiper) {
+      branchesSwiper.destroy(true, true);
+      branchesSwiper = null;
+    }
+  }
+
+  initSwiper();
+
+  const accordionButtons = document.querySelectorAll('.branches .accordion-button');
+  const accordionItems = document.querySelectorAll('.branches .accordion-item');
   
-  if (accordionItems && window.innerWidth > 767) {
-    // Аккордеоны по клику
+  if (accordionItems && (window.innerWidth > 767) ) {
     accordionButtons.forEach(button => {
       button.addEventListener('click', function() {
         const content = this.nextElementSibling;
@@ -121,8 +264,8 @@ window.addEventListener("load", () => {
     });
   }
 
-  // services__accordion
-  document.querySelectorAll(".services__accordion .accordion-header").forEach((button) => {
+  // Services accordion
+  document.querySelectorAll(".services-page .accordion-header").forEach((button) => {
     button.addEventListener("click", () => {
       const accordionContent = button.nextElementSibling;
 
@@ -134,8 +277,7 @@ window.addEventListener("load", () => {
         accordionContent.style.maxHeight = 0;
       }
 
-      // Close other open accordion items
-      document.querySelectorAll(".accordion-header").forEach((otherButton) => {
+      document.querySelectorAll(".services-page .accordion-header").forEach((otherButton) => {
         if (otherButton !== button) {
           otherButton.classList.remove("active");
           otherButton.nextElementSibling.style.maxHeight = 0;
@@ -153,22 +295,17 @@ window.addEventListener("load", () => {
   Fancybox.bind("[data-fancybox]");
 
   // tabs
-
   const tabs = document.querySelectorAll('.tab');
   const tabContents = document.querySelectorAll('.tab-content-item');
 
   tabs.forEach(tab => {
     tab.addEventListener('click', function() {
-      // remove active class from all tabs and tab content
       tabs.forEach(tab => tab.classList.remove('active'));
       tabContents.forEach(content => content.classList.remove('active'));
-
-      // add active class to current tab and its corresponding tab content
       this.classList.add('active');
       document.getElementById(this.dataset.tabContent).classList.add('active');
     });
   });
-
 
   const activateOnScroll = (element, offset = 107) => {
     if (element) {
@@ -284,11 +421,9 @@ window.addEventListener("load", () => {
   }
 
   // file input
-
   const inputFile = document.querySelector("#picture__input");
   const pictureBox = document.querySelector(".picture");
   const pictureImage = document.querySelector(".picture__image");
-  const pictureImageTxt = "";
   const img = document.createElement("img");
   img.classList.add("picture__img");
   img.src = 'img/file.svg';
@@ -337,39 +472,40 @@ window.addEventListener("load", () => {
     handleScroll();
     addPadTop();
     if (window.innerWidth > 1024) setCardEvents();
+    initSwiper();
   });
 
   let prevScrollpos = window.scrollY;
 
-  window.addEventListener("scroll", ()=> {
-    handleScroll();
-    activateOnScroll(document.querySelector('.webinar'));
-    activateOnScroll(document.querySelector('.knowledge'));
-
-    if(window.innerWidth <= 767) {
-      let currentScrollPos = window.scrollY;
-      if(prevScrollpos > currentScrollPos){
-        header.style.top = "0px";
-      }else if(currentScrollPos == 0){
-        header.style.top = "0px";
-      }else{
-        header.style.top = "-50px";
+  window.addEventListener("scroll", () => {
+    let currentScrollPos = window.scrollY;
+  
+    // Выполняем остальной код только при изменении скролла
+    if (prevScrollpos !== currentScrollPos) {
+      handleScroll();
+      activateOnScroll(document.querySelector('.webinar'));
+      activateOnScroll(document.querySelector('.knowledge'));
+  
+      if (window.innerWidth <= 767) {
+        if (prevScrollpos > currentScrollPos || currentScrollPos === 0) {
+          header.style.top = "0px";
+        } else {
+          header.style.top = "-50px";
+        }
+      }
+  
+      const firstAccordionItem = document.querySelector('.branches .accordion-item');
+      const activeAccordion = document.querySelector('.branches .accordion-item.active');
+  
+      if (firstAccordionItem && !activeAccordion && window.innerWidth > 767) {
+        let firstAccordionOffset = firstAccordionItem.getBoundingClientRect().top + window.scrollY;
+        if (currentScrollPos > firstAccordionOffset - window.innerHeight / 2) {
+          const firstContent = firstAccordionItem.querySelector('.accordion-content');
+          firstAccordionItem.classList.add('active');
+          firstContent.style.maxHeight = firstContent.scrollHeight + 'px';
+        }
       }
       prevScrollpos = currentScrollPos;
-    }
-
-    // Открытие первого аккордеона
-    const firstAccordionItem = document.querySelector('.accordion-item');
-    const activeAccordion = document.querySelector('.accordion-item.active'); // Проверяем, есть ли уже открытый аккордеон
-
-    if (firstAccordionItem && !activeAccordion && window.innerWidth > 767) { // Открываем первый аккордеон только если никакой другой не активен
-      let firstAccordionOffset = firstAccordionItem.getBoundingClientRect().top + window.scrollY;
-
-      if (window.scrollY > firstAccordionOffset - window.innerHeight / 2) {
-        const firstContent = firstAccordionItem.querySelector('.accordion-content');
-        firstAccordionItem.classList.add('active');
-        firstContent.style.maxHeight = firstContent.scrollHeight + 'px';
-      }
     }
   });
 });
