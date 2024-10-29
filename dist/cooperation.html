@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Сотрудничество</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?_v=20241029130806" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css?_v=20241029130806" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20241029130806" />
+  <link rel="stylesheet" href="css/style.css?_v=20241029130806" />
+
+  <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+</head>
+
+  <body>
+    <div class="modals">
+  <div class="modal modal-branch" data-type="modalBranch">
+    <div class="modal__container">
+      <div class="modal__top">
+        <h4 class="modal__caption">Выберите филиал ближайший к вашему городу</h4>
+        <button class="modal__close">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2084_4596)">
+            <path d="M0.976745 19.9997C0.783573 19.9997 0.594729 19.9425 0.434101 19.8352C0.273472 19.7279 0.148276 19.5753 0.074347 19.3969C0.000418327 19.2184 -0.0189212 19.022 0.0187748 18.8326C0.0564707 18.6431 0.149509 18.4691 0.28612 18.3325L18.333 0.285639C18.5162 0.102474 18.7646 -0.000427246 19.0236 -0.000427246C19.2827 -0.000427246 19.5311 0.102474 19.7142 0.285639C19.8974 0.468804 20.0003 0.717229 20.0003 0.976264C20.0003 1.2353 19.8974 1.48372 19.7142 1.66689L1.66737 19.7138C1.57676 19.8046 1.4691 19.8766 1.35058 19.9256C1.23207 19.9747 1.10502 19.9999 0.976745 19.9997Z" fill="white"/>
+            <path d="M19.0236 19.9997C18.8953 19.9999 18.7682 19.9747 18.6497 19.9256C18.5312 19.8766 18.4236 19.8046 18.3329 19.7138L0.286066 1.66689C0.102901 1.48372 0 1.2353 0 0.976264C0 0.717229 0.102901 0.468804 0.286066 0.285639C0.469231 0.102474 0.717657 -0.000427246 0.976691 -0.000427246C1.23573 -0.000427246 1.48415 0.102474 1.66732 0.285639L19.7142 18.3325C19.8508 18.4691 19.9438 18.6431 19.9815 18.8326C20.0192 19.022 19.9999 19.2184 19.926 19.3969C19.852 19.5753 19.7268 19.7279 19.5662 19.8352C19.4056 19.9425 19.2167 19.9997 19.0236 19.9997Z" fill="white"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_2084_4596">
+            <rect width="20" height="20" fill="white"/>
+            </clipPath>
+            </defs>
+          </svg>                       
+        </button>
+      </div>
+      <div class="modal__form">
+        <form action="">
+          <div class="form-group">
+            <input type="radio" name="radio" id="radio-1" checked>
+            <label for="radio-1">Атырау</label>
+          </div>
+          <div class="form-group">
+            <input type="radio" name="radio" id="radio-2">
+            <label for="radio-2">Алматы</label>
+          </div>
+          <div class="form-group">
+            <input type="radio" name="radio" id="radio-3">
+            <label for="radio-3">Астана</label>
+          </div>
+          <div class="form-group">
+            <input type="radio" name="radio" id="radio-4">
+            <label for="radio-4">Шымкент</label>
+          </div>
+          <div class="form-group">
+            <input type="radio" name="radio" id="radio-5">
+            <label for="radio-5">Караганда</label>
+          </div>
+          <div class="form-group">
+            <input type="radio" name="radio" id="radio-6">
+            <label for="radio-6">Бишкек</label>
+          </div>
+          <div class="form-group">
+            <input type="radio" name="radio" id="radio-7">
+            <label for="radio-7">Уральск</label>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal modal-record" data-type="modalRecord">
+    <div class="modal__container">
+      <div class="modal__top">
+        <h4 class="modal__caption">Запись на снимок</h4>
+        <button class="modal__close">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2084_4596)">
+            <path d="M0.976745 19.9997C0.783573 19.9997 0.594729 19.9425 0.434101 19.8352C0.273472 19.7279 0.148276 19.5753 0.074347 19.3969C0.000418327 19.2184 -0.0189212 19.022 0.0187748 18.8326C0.0564707 18.6431 0.149509 18.4691 0.28612 18.3325L18.333 0.285639C18.5162 0.102474 18.7646 -0.000427246 19.0236 -0.000427246C19.2827 -0.000427246 19.5311 0.102474 19.7142 0.285639C19.8974 0.468804 20.0003 0.717229 20.0003 0.976264C20.0003 1.2353 19.8974 1.48372 19.7142 1.66689L1.66737 19.7138C1.57676 19.8046 1.4691 19.8766 1.35058 19.9256C1.23207 19.9747 1.10502 19.9999 0.976745 19.9997Z" fill="white"/>
+            <path d="M19.0236 19.9997C18.8953 19.9999 18.7682 19.9747 18.6497 19.9256C18.5312 19.8766 18.4236 19.8046 18.3329 19.7138L0.286066 1.66689C0.102901 1.48372 0 1.2353 0 0.976264C0 0.717229 0.102901 0.468804 0.286066 0.285639C0.469231 0.102474 0.717657 -0.000427246 0.976691 -0.000427246C1.23573 -0.000427246 1.48415 0.102474 1.66732 0.285639L19.7142 18.3325C19.8508 18.4691 19.9438 18.6431 19.9815 18.8326C20.0192 19.022 19.9999 19.2184 19.926 19.3969C19.852 19.5753 19.7268 19.7279 19.5662 19.8352C19.4056 19.9425 19.2167 19.9997 19.0236 19.9997Z" fill="white"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_2084_4596">
+            <rect width="20" height="20" fill="white"/>
+            </clipPath>
+            </defs>
+          </svg>            
+        </button>
+      </div>
+      <div class="modal__form">
+        <form action="">
+          <input type="text" name="" id="" placeholder="ФИО">
+          <input type="tel" name="" id="" placeholder="Номер телефона">
+          <input type="text" name="" id="" placeholder="Город">
+          <textarea name="" id="" placeholder="Напишите комментарий...  "></textarea>
+          <input type="submit" value="Записаться" class="button button_light">
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal modal-reviews" data-type="modalReviews">
+    <div class="modal__container">
+      <button class="modal__close">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_2084_4596)">
+          <path d="M0.976745 19.9997C0.783573 19.9997 0.594729 19.9425 0.434101 19.8352C0.273472 19.7279 0.148276 19.5753 0.074347 19.3969C0.000418327 19.2184 -0.0189212 19.022 0.0187748 18.8326C0.0564707 18.6431 0.149509 18.4691 0.28612 18.3325L18.333 0.285639C18.5162 0.102474 18.7646 -0.000427246 19.0236 -0.000427246C19.2827 -0.000427246 19.5311 0.102474 19.7142 0.285639C19.8974 0.468804 20.0003 0.717229 20.0003 0.976264C20.0003 1.2353 19.8974 1.48372 19.7142 1.66689L1.66737 19.7138C1.57676 19.8046 1.4691 19.8766 1.35058 19.9256C1.23207 19.9747 1.10502 19.9999 0.976745 19.9997Z" fill="white"/>
+          <path d="M19.0236 19.9997C18.8953 19.9999 18.7682 19.9747 18.6497 19.9256C18.5312 19.8766 18.4236 19.8046 18.3329 19.7138L0.286066 1.66689C0.102901 1.48372 0 1.2353 0 0.976264C0 0.717229 0.102901 0.468804 0.286066 0.285639C0.469231 0.102474 0.717657 -0.000427246 0.976691 -0.000427246C1.23573 -0.000427246 1.48415 0.102474 1.66732 0.285639L19.7142 18.3325C19.8508 18.4691 19.9438 18.6431 19.9815 18.8326C20.0192 19.022 19.9999 19.2184 19.926 19.3969C19.852 19.5753 19.7268 19.7279 19.5662 19.8352C19.4056 19.9425 19.2167 19.9997 19.0236 19.9997Z" fill="white"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_2084_4596">
+          <rect width="20" height="20" fill="white"/>
+          </clipPath>
+          </defs>
+        </svg>             
+      </button>
+      <div class="modal__form">
+        <form action="">
+          <div class="form-group">
+            <input type="text" name="" id="" placeholder="Фамилия и Имя" class="field-name">
+            <div class="form-file">
+              <label class="picture" for="picture__input" tabIndex="0">
+                <span class="picture__image" data-img="img/file.svg"></span>
+              </label>
+              <input type="file" name="" id="picture__input">
+            </div>
+          </div>
+          <textarea name="" id="" placeholder="Напишите, что вы думаете..." class="field-message"></textarea>
+          <input type="submit" value="Отправить" class="button button_primary">
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal modal-educational" data-type="modalEducational">
+    <div class="modal__container">
+      <button class="modal__close">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_2084_4596)">
+          <path d="M0.976745 19.9997C0.783573 19.9997 0.594729 19.9425 0.434101 19.8352C0.273472 19.7279 0.148276 19.5753 0.074347 19.3969C0.000418327 19.2184 -0.0189212 19.022 0.0187748 18.8326C0.0564707 18.6431 0.149509 18.4691 0.28612 18.3325L18.333 0.285639C18.5162 0.102474 18.7646 -0.000427246 19.0236 -0.000427246C19.2827 -0.000427246 19.5311 0.102474 19.7142 0.285639C19.8974 0.468804 20.0003 0.717229 20.0003 0.976264C20.0003 1.2353 19.8974 1.48372 19.7142 1.66689L1.66737 19.7138C1.57676 19.8046 1.4691 19.8766 1.35058 19.9256C1.23207 19.9747 1.10502 19.9999 0.976745 19.9997Z" fill="white"/>
+          <path d="M19.0236 19.9997C18.8953 19.9999 18.7682 19.9747 18.6497 19.9256C18.5312 19.8766 18.4236 19.8046 18.3329 19.7138L0.286066 1.66689C0.102901 1.48372 0 1.2353 0 0.976264C0 0.717229 0.102901 0.468804 0.286066 0.285639C0.469231 0.102474 0.717657 -0.000427246 0.976691 -0.000427246C1.23573 -0.000427246 1.48415 0.102474 1.66732 0.285639L19.7142 18.3325C19.8508 18.4691 19.9438 18.6431 19.9815 18.8326C20.0192 19.022 19.9999 19.2184 19.926 19.3969C19.852 19.5753 19.7268 19.7279 19.5662 19.8352C19.4056 19.9425 19.2167 19.9997 19.0236 19.9997Z" fill="white"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_2084_4596">
+          <rect width="20" height="20" fill="white"/>
+          </clipPath>
+          </defs>
+        </svg>           
+      </button>
+      <div class="modal__img"><img src="img/educational-2.png" alt=""></div>
+      <h3 class="modal__caption">Курс по правильной обработке зубов</h3>
+      <div class="modal__date">20 августа в 17:00</div>
+      <div class="modal__desc">Но синтетическое тестирование не даёт нам иного выбора, кроме определения дальнейших направлений развития. Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: сплочённость команды профессионалов однозначно фиксирует необходимость как самодостаточных, так и внешне зависимых концептуальных решений!</div>
+      <div class="modal__speakers">
+        <h4>Выступают:</h4>
+        <div class="modal__list">
+          <div class="modal__speaker">Айна Мусагалиева</div>
+          <div class="modal__speaker">Анна Николаева</div>
+          <div class="modal__speaker">Диас Ахметулы</div>
+        </div>
+      </div>
+      <a class="modal__btn button button_light">Отправить заявку</a>
+    </div>
+  </div>
+  <div class="modal modal-feedback" data-type="modalFeedback">
+    <div class="modal__container">
+      <div class="modal__top">
+        <h4 class="modal__caption">Оставить заявку</h4>
+        <button class="modal__close">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2084_4596)">
+            <path d="M0.976745 19.9997C0.783573 19.9997 0.594729 19.9425 0.434101 19.8352C0.273472 19.7279 0.148276 19.5753 0.074347 19.3969C0.000418327 19.2184 -0.0189212 19.022 0.0187748 18.8326C0.0564707 18.6431 0.149509 18.4691 0.28612 18.3325L18.333 0.285639C18.5162 0.102474 18.7646 -0.000427246 19.0236 -0.000427246C19.2827 -0.000427246 19.5311 0.102474 19.7142 0.285639C19.8974 0.468804 20.0003 0.717229 20.0003 0.976264C20.0003 1.2353 19.8974 1.48372 19.7142 1.66689L1.66737 19.7138C1.57676 19.8046 1.4691 19.8766 1.35058 19.9256C1.23207 19.9747 1.10502 19.9999 0.976745 19.9997Z" fill="white"/>
+            <path d="M19.0236 19.9997C18.8953 19.9999 18.7682 19.9747 18.6497 19.9256C18.5312 19.8766 18.4236 19.8046 18.3329 19.7138L0.286066 1.66689C0.102901 1.48372 0 1.2353 0 0.976264C0 0.717229 0.102901 0.468804 0.286066 0.285639C0.469231 0.102474 0.717657 -0.000427246 0.976691 -0.000427246C1.23573 -0.000427246 1.48415 0.102474 1.66732 0.285639L19.7142 18.3325C19.8508 18.4691 19.9438 18.6431 19.9815 18.8326C20.0192 19.022 19.9999 19.2184 19.926 19.3969C19.852 19.5753 19.7268 19.7279 19.5662 19.8352C19.4056 19.9425 19.2167 19.9997 19.0236 19.9997Z" fill="white"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_2084_4596">
+            <rect width="20" height="20" fill="white"/>
+            </clipPath>
+            </defs>
+          </svg>             
+        </button>
+      </div>
+      <div class="modal__form">
+        <form action="">
+          <input type="text" name="" id="" placeholder="ФИО">
+          <input type="tel" name="" id="" placeholder="Номер телефона">
+          <input type="text" name="" id="" placeholder="Город">
+          <input type="email" name="" id="" placeholder="Почта">
+          <input type="text" name="" id="" placeholder="Специальность">
+          <input type="text" name="" id="" placeholder="Клиника">
+          <textarea name="" id="" placeholder="Напишите комментарий...  "></textarea>
+          <input type="submit" value="Записаться" class="button button_light">
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal modal-thanks" data-type="modalThanks">
+    <div class="modal__container">
+      <div class="modal__top">
+        <h4 class="modal__caption">Спасибо за обращение. В ближайшее время мы свяжемся с вами для подтверждения заявки.</h4>
+        <button class="modal__close">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2084_4596)">
+            <path d="M0.976745 19.9997C0.783573 19.9997 0.594729 19.9425 0.434101 19.8352C0.273472 19.7279 0.148276 19.5753 0.074347 19.3969C0.000418327 19.2184 -0.0189212 19.022 0.0187748 18.8326C0.0564707 18.6431 0.149509 18.4691 0.28612 18.3325L18.333 0.285639C18.5162 0.102474 18.7646 -0.000427246 19.0236 -0.000427246C19.2827 -0.000427246 19.5311 0.102474 19.7142 0.285639C19.8974 0.468804 20.0003 0.717229 20.0003 0.976264C20.0003 1.2353 19.8974 1.48372 19.7142 1.66689L1.66737 19.7138C1.57676 19.8046 1.4691 19.8766 1.35058 19.9256C1.23207 19.9747 1.10502 19.9999 0.976745 19.9997Z" fill="white"/>
+            <path d="M19.0236 19.9997C18.8953 19.9999 18.7682 19.9747 18.6497 19.9256C18.5312 19.8766 18.4236 19.8046 18.3329 19.7138L0.286066 1.66689C0.102901 1.48372 0 1.2353 0 0.976264C0 0.717229 0.102901 0.468804 0.286066 0.285639C0.469231 0.102474 0.717657 -0.000427246 0.976691 -0.000427246C1.23573 -0.000427246 1.48415 0.102474 1.66732 0.285639L19.7142 18.3325C19.8508 18.4691 19.9438 18.6431 19.9815 18.8326C20.0192 19.022 19.9999 19.2184 19.926 19.3969C19.852 19.5753 19.7268 19.7279 19.5662 19.8352C19.4056 19.9425 19.2167 19.9997 19.0236 19.9997Z" fill="white"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_2084_4596">
+            <rect width="20" height="20" fill="white"/>
+            </clipPath>
+            </defs>
+          </svg>            
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sticky__box">
+  <a class="sticky__icon" href="#" target="_blank">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M9.73827 14.2627C11.7608 16.2852 13.692 16.5518 14.374 16.5769C15.4165 16.6153 16.4188 15.8283 16.8148 14.9042C16.9112 14.6792 16.8872 14.4085 16.7255 14.2014C16.1782 13.5005 15.4374 12.9983 14.7134 12.4984C14.4007 12.282 13.9705 12.349 13.7402 12.6555L13.1394 13.5706C13.0728 13.6721 12.9402 13.707 12.8348 13.6467C12.4284 13.4143 11.8357 13.018 11.4093 12.5916C10.9834 12.1657 10.6112 11.5998 10.4022 11.2195C10.3473 11.1195 10.3778 10.996 10.4693 10.928L11.3927 10.2422C11.6681 10.0038 11.7166 9.59887 11.5138 9.30228C11.065 8.64569 10.5422 7.8112 9.78556 7.25926C9.57889 7.1085 9.31746 7.09158 9.10162 7.18408C8.17688 7.5804 7.38562 8.58294 7.42404 9.62695C7.44914 10.3089 7.71578 12.2402 9.73827 14.2627Z" fill="white"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.47715 2 2 6.47715 2 12C2 13.8896 2.52505 15.6594 3.43756 17.1683L2.54581 20.2002C2.32023 20.9672 3.03284 21.6798 3.79975 21.4542L6.83171 20.5624C8.34058 21.475 10.1104 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20C10.4231 20 8.95564 19.5448 7.71817 18.759C7.36114 18.5323 6.91075 18.4545 6.47827 18.5817L4.97667 19.0233L5.41832 17.5217C5.54552 17.0892 5.46769 16.6389 5.24098 16.2818C4.4552 15.0444 4 13.5769 4 12Z" fill="white"></path>
+    </svg> 
+  </a>
+</div>
+
+<header class="header">
+  <div class="container">
+    <div class="header__container">
+      <a href="/" class="header__logo">
+        <picture>
+          <source srcset="img/logo-mb.svg" media="(max-width: 767px)">
+          <img src="img/logo.svg" alt="Header Logo" />
+        </picture>
+      </a>
+      <div class="header__user">
+        <label>Пациентам</label>
+        <input type="checkbox" name="checkbox1" id="checkbox1" class="switch">
+        <label>Врачам</label>
+      </div>
+      <nav class="header__nav">
+        <div class="header__cities cities-select header-cities-select">
+          <div></div>
+          <ul>
+            <li><a href="#" data-cities="astana">Астана</a></li>
+            <li class="active"><a href="#" data-cities="karaganda">Караганда</a></li>
+            <li><a href="#" data-cities="almaty">Алматы</a></li>
+          </ul>
+        </div>
+        <ul class="header__menu">
+          <li><a href="" class="active">Услуги</a></li>
+          <li><a href="">Учебный центр</a></li>
+          <li><a href="">Контакты</a></li>
+          <li><a href="">Сотрудничество</a></li>
+        </ul>
+        <div class="header__lang">
+          <a href="#" class="active">Kz</a>
+          <a href="#">Ru</a>
+        </div>
+      </nav>
+      <div class="header__burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <main>
+      <section class="breadcrumbs section-top">
+  <div class="container">
+    <div class="breadcrumbs__container">
+      <ul class="breadcrumbs__list">
+        <li><a href="">Главная</a></li>
+        <li>Сотрудничество</li>
+      </ul>
+    </div>
+  </div>
+</section> 
+      <section class="cooperation-page section-pad-bottom">
+        <div class="container">
+          <div class="cooperation-page__container">
+            <h1 class="cooperation-page__title title-up">Сотрудничество</h1>
+            <div class="cooperation-page__wrap">
+              <div class="cooperation-page__img"><img src="img/coorp-1.png" alt=""></div>
+              <div class="cooperation-page__desc">
+                <p>Как принято считать, интерактивные прототипы объективно рассмотрены соответствующими инстанциями.</p>
+                <img src="img/coorp-2.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="indicator section-pad-bottom">
+        <div class="container">
+          <div class="indicator__container">
+            <div class="indicator__box">
+              <h3 class="indicator__title title-up">показатели нашей компании</h3>
+              <div class="indicator__desc">Как принято считать, интерактивные прототипы объективно рассмотрены соответствующими инстанциями.</div>
+            </div>
+            <div class="indicator__benefits">
+              <div class="indicator__benefit big blue">
+                <span class="num">150+</span>
+                <span>постоянных клиентов</span>
+              </div>
+              <div class="indicator__benefit">
+                <span class="num">200+</span>
+                <span>отзывов</span>
+              </div>
+              <div class="indicator__benefit yellow">
+                <span class="num">10</span>
+                <span>лет на рынке</span>
+              </div>
+              <div class="indicator__benefit small">
+                <span class="num">20</span>
+                <span>сотрудников</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="advantage section-pad-bottom">
+        <div class="container">
+          <div class="advantage__container">
+            <h2 class="advantage__title title-up">плюсы сотрудничества</h2>
+            <div class="advantage__img"><img src="img/advan.png" alt=""></div>
+            <div class="advantage__cards">
+              <div class="advantage__card">
+                <div class="advantage__icon"><img src="img/Icons-1.svg" alt=""></div>
+                <h6 class="advantage__caption">Независимый диагностический центр</h6>
+                <div class="advantage__txt">Как принято считать, интерактивные прототипы объективно рассмотрены соответствующими инстанциями.</div>
+              </div>
+              <div class="advantage__card">
+                <div class="advantage__icon"><img src="img/Icons-2.svg" alt=""></div>
+                <h6 class="advantage__caption">Независимый диагностический центр</h6>
+                <div class="advantage__txt">Как принято считать, интерактивные прототипы объективно рассмотрены соответствующими инстанциями.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="provide section-pad">
+        <div class="container">
+          <div class="provide__container">
+            <h2 class="provide__title title-up title-color">Что дает <strong>3D снимок</strong> врачу?</h2>
+            <div class="provide__cards">
+              <div class="provide__card">
+                <span class="num">01</span>
+                <h3 class="provide__caption">Имплантологу</h3>
+                <div class="provide__txt">Для современного мира высокотехнологичная концепция общественного уклада предполагает независимые способы реализации своевременного выполнения сверхзадачи.</div>
+              </div>
+              <div class="provide__card">
+                <span class="num">02</span>
+                <h3 class="provide__caption">Ортодонту</h3>
+                <div class="provide__txt">Для современного мира высокотехнологичная концепция общественного уклада предполагает независимые способы реализации своевременного выполнения сверхзадачи.</div>
+              </div>
+              <div class="provide__card">
+                <span class="num">03</span>
+                <h3 class="provide__caption">Детскому стоматологу</h3>
+                <div class="provide__txt">Для современного мира высокотехнологичная концепция общественного уклада предполагает независимые способы реализации своевременного выполнения сверхзадачи.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="reviews section-pad">
+  <div class="container">
+    <div class="reviews__container">
+      <h2 class="reviews__title title-up">Отзывы</h2>
+      <div class="reviews__slider">
+        <div class="swiper reviewsSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><div class="reviews__card">
+  <div class="reviews__content">
+    <h4 class="reviews__author">Елена Борисова</h4>
+    <div class="reviews__txt">Но перспективное планирование предоставляет широкие возможности для направлений прогрессивного развития. 
+    В частности, укрепление и развитие внутренней структуры предопределяет высокую востребованность дальнейших направлений развития.</div>
+  </div>
+  <div class="reviews__img"><img src="img/author.png" alt="Reviews author"></div>
+</div></div>
+            <div class="swiper-slide"><div class="reviews__card">
+  <div class="reviews__content">
+    <h4 class="reviews__author">Елена Борисова</h4>
+    <div class="reviews__txt">Но перспективное планирование предоставляет широкие возможности для направлений прогрессивного развития. 
+    В частности, укрепление и развитие внутренней структуры предопределяет высокую востребованность дальнейших направлений развития.</div>
+  </div>
+  <div class="reviews__img"><img src="img/author.png" alt="Reviews author"></div>
+</div></div>
+            <div class="swiper-slide"><div class="reviews__card">
+  <div class="reviews__content">
+    <h4 class="reviews__author">Елена Борисова</h4>
+    <div class="reviews__txt">Но перспективное планирование предоставляет широкие возможности для направлений прогрессивного развития. 
+    В частности, укрепление и развитие внутренней структуры предопределяет высокую востребованность дальнейших направлений развития.</div>
+  </div>
+  <div class="reviews__img"><img src="img/author.png" alt="Reviews author"></div>
+</div></div>
+            <div class="swiper-slide"><div class="reviews__card">
+  <div class="reviews__content">
+    <h4 class="reviews__author">Елена Борисова</h4>
+    <div class="reviews__txt">Но перспективное планирование предоставляет широкие возможности для направлений прогрессивного развития. 
+    В частности, укрепление и развитие внутренней структуры предопределяет высокую востребованность дальнейших направлений развития.</div>
+  </div>
+  <div class="reviews__img"><img src="img/author.png" alt="Reviews author"></div>
+</div></div>
+            <div class="swiper-slide"><div class="reviews__card">
+  <div class="reviews__content">
+    <h4 class="reviews__author">Елена Борисова</h4>
+    <div class="reviews__txt">Но перспективное планирование предоставляет широкие возможности для направлений прогрессивного развития. 
+    В частности, укрепление и развитие внутренней структуры предопределяет высокую востребованность дальнейших направлений развития.</div>
+  </div>
+  <div class="reviews__img"><img src="img/author.png" alt="Reviews author"></div>
+</div></div>
+          </div>
+          <div class="swiper-button swiper-button-next reviews-button-next">
+            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.9602 9.36567L5.9519 0.245066C5.62348 -0.0816885 5.09085 -0.0816885 4.76243 0.245066C4.43401 0.571794 4.43401 1.10195 4.76243 1.4287L14.1673 10L4.76326 18.5713C4.43484 18.898 4.43484 19.4282 4.76326 19.7549C5.09168 20.0817 5.62431 20.0817 5.95271 19.7549L15.961 10.6343C16.1361 10.4601 16.2111 10.2292 16.1994 10.0008C16.2103 9.77161 16.1353 9.54071 15.9602 9.36567Z" fill="white"/>
+            </svg>                                      
+          </div>
+          <div class="swiper-button swiper-button-prev reviews-button-prev">
+            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.7566 10.6343L14.7649 19.7549C15.0933 20.0817 15.6259 20.0817 15.9544 19.7549C16.2828 19.4282 16.2828 18.8981 15.9544 18.5713L6.54953 9.99999L15.9535 1.42871C16.282 1.10195 16.282 0.571796 15.9535 0.245068C15.6251 -0.0816612 15.0925 -0.0816612 14.7641 0.245068L4.75577 9.36567C4.58073 9.53986 4.50568 9.77078 4.51737 9.99916C4.50649 10.2284 4.58151 10.4593 4.7566 10.6343Z" fill="white"/>
+            </svg>                                      
+          </div>
+        </div>
+      </div>
+      <a class="reviews__btn button button_border" href="#">Оставить отзыв</a>
+    </div>
+  </div>
+</section>
+      <section class="feedback section-pad">
+  <div class="container">
+    <div class="feedback__container">
+      <h2 class="feedback__title title-up"><strong>Заполните форму,</strong> чтобы связаться с нами</h2>
+      <div class="feedback__form">
+        <form action="">
+          <input type="text" name="name" placeholder="Имя" class="form__field" required>
+          <input type="email" name="email" placeholder="E-mail" class="form__field">
+          <input type="tel" name="tel" placeholder="Номер телефона" class="form__field" required>
+          <input type="text" name="city" placeholder="Город" class="form__field">
+          <input type="text" name="message" placeholder="Сообщение" class="form__field">
+          <div class="group-check">
+            <input type="checkbox" name="checkbox2" id="checkbox2" required>
+            <label for="checkbox2">Я ознакомился с политикой конфиденциальности и даю свое соглашение на обработку данных</label>
+          </div>
+          <input type="submit" value="Отправить заявку" class="form__btn button button_light">
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+    </main>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__container">
+      <div class="footer__desc">
+        <h2 class="footer__title">Качественная диагностика <span>залог правильного лечения</span></h2>
+        <div class="footer__name">3D Dental</div>
+      </div>
+      <div class="footer__info">
+        <ul class="footer__menu">
+          <li><a href="">Услуги</a></li>
+          <li><a href="">Сотрудничество</a></li>
+          <li><a href="">Отзывы</a></li>
+          <li><a href="">База знаний</a></li>
+          <li><a href="">Учебный центр</a></li>
+          <li><a href="">Онлайн вебинар</a></li>
+          <li><a href="">Адреса центров</a></li>
+        </ul>
+        <div class="footer__contacts">
+          <a href="tel:+7 701 224 2430" class="footer__tel">+7 701 224 2430</a>
+          <a href="mailto:3ddental.astana3@gmail.com" class="footer__mail">3ddental.astana3@gmail.com</a>
+        </div>
+        <div class="footer__socials">
+          <a href="/" class="footer__social" target="_blank">
+            <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.5 12.1514C14.5484 12.1514 12.1509 14.5489 12.1509 17.5005C12.1509 20.4522 14.5484 22.8555 17.5 22.8555C20.4517 22.8555 22.855 20.4522 22.855 17.5005C22.855 14.5489 20.4517 12.1514 17.5 12.1514Z" fill="white"/>
+              <path d="M25.5732 2.91699H9.4265C5.839 2.91699 2.9165 5.83949 2.9165 9.42699V25.5737C2.9165 29.167 5.839 32.0837 9.4265 32.0837H25.5732C29.1665 32.0837 32.0832 29.167 32.0832 25.5737V9.42699C32.0832 5.83949 29.1665 2.91699 25.5732 2.91699ZM17.4998 26.9503C12.2907 26.9503 8.04984 22.7095 8.04984 17.5003C8.04984 12.2912 12.2907 8.05616 17.4998 8.05616C22.709 8.05616 26.9498 12.2912 26.9498 17.5003C26.9498 22.7095 22.709 26.9503 17.4998 26.9503ZM27.1482 9.77116C26.0457 9.77116 25.1473 8.87866 25.1473 7.77616C25.1473 6.67366 26.0457 5.77533 27.1482 5.77533C28.2507 5.77533 29.149 6.67366 29.149 7.77616C29.149 8.87866 28.2507 9.77116 27.1482 9.77116Z" fill="white"/>
+            </svg>              
+          </a>
+          <a href="/" class="footer__social" target="_blank">
+            <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_1538_557)">
+              <path d="M13.7329 22.1389L13.1539 30.2822C13.9823 30.2822 14.341 29.9264 14.7712 29.4991L18.6548 25.7876L26.7019 31.6808C28.1777 32.5033 29.2175 32.0701 29.6156 30.3231L34.8977 5.57223L34.8991 5.57077C35.3673 3.38911 34.1102 2.53598 32.6723 3.07119L1.62435 14.9581C-0.494604 15.7806 -0.462521 16.9618 1.26415 17.497L9.20185 19.966L27.6396 8.42911C28.5073 7.85452 29.2962 8.17244 28.6473 8.74702L13.7329 22.1389Z" fill="white"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_1538_557">
+              <rect width="35" height="35" fill="white"/>
+              </clipPath>
+              </defs>
+            </svg>              
+          </a>
+          <a href="/" class="footer__social" target="_blank">
+            <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32.8343 8.77637C30.8368 8.77637 28.9939 8.11465 27.5139 6.99834C25.8165 5.71865 24.597 3.8415 24.1663 1.67793C24.0597 1.14336 24.0023 0.591699 23.9968 0.0263672H18.2908V15.6178L18.284 24.1579C18.284 26.4411 16.7972 28.377 14.7361 29.0579C14.138 29.2555 13.492 29.3491 12.8193 29.3122C11.9608 29.265 11.1562 29.006 10.4568 28.5876C8.96866 27.6976 7.95968 26.0829 7.93233 24.2358C7.88927 21.349 10.2231 18.9954 13.1078 18.9954C13.6773 18.9954 14.2241 19.0884 14.7361 19.2572V14.9957V13.4638C14.1961 13.3838 13.6465 13.3421 13.0907 13.3421C9.93321 13.3421 6.98009 14.6546 4.86915 17.0191C3.27364 18.8061 2.31661 21.0858 2.16896 23.4764C1.9755 26.6168 3.12462 29.602 5.35314 31.8046C5.68058 32.1279 6.02442 32.428 6.38399 32.7049C8.29464 34.1753 10.6305 34.9724 13.0907 34.9724C13.6465 34.9724 14.1961 34.9313 14.7361 34.8514C17.0344 34.5109 19.1549 33.4589 20.8283 31.8046C22.8846 29.7723 24.0207 27.0741 24.033 24.2023L24.0036 11.4492C24.9846 12.206 26.0571 12.8321 27.2083 13.3182C28.9986 14.0735 30.897 14.4563 32.8507 14.4557V10.3124V8.775C32.8521 8.77637 32.8357 8.77637 32.8343 8.77637Z" fill="white"/>
+            </svg>              
+          </a>
+          <a href="/" class="footer__social" target="_blank">
+            <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M33.213 9.29898C32.8349 7.89327 31.7266 6.78517 30.3211 6.40665C27.7534 5.7041 17.4825 5.7041 17.4825 5.7041C17.4825 5.7041 7.21198 5.7041 4.6443 6.38002C3.26583 6.75813 2.13049 7.89347 1.75238 9.29898C1.07666 11.8665 1.07666 17.1911 1.07666 17.1911C1.07666 17.1911 1.07666 22.5425 1.75238 25.0832C2.13089 26.4887 3.23879 27.5968 4.6445 27.9753C7.23902 28.6781 17.4829 28.6781 17.4829 28.6781C17.4829 28.6781 27.7534 28.6781 30.3211 28.0021C31.7268 27.6238 32.8349 26.5157 33.2134 25.1102C33.889 22.5425 33.889 17.2181 33.889 17.2181C33.889 17.2181 33.916 11.8665 33.213 9.29898ZM14.2125 22.1102V12.272L22.7533 17.1911L14.2125 22.1102Z" fill="white"/>
+            </svg>              
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#" class="footer__up">
+    <svg width="20" height="348" viewBox="0 0 20 348" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 2L1 15.7975M10 2L19 15.7975M10 2V348" stroke="#3C4F6D" stroke-width="2"/>
+    </svg>      
+    <span>Вверх</span>
+  </a>
+</footer>
+ 
+    <script src="js/jquery-3.6.0.min.js?_v=20241029130806"></script>
+<script src="js/jquery.maskedinput.js?_v=20241029130806"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?_v=20241029130806"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js?_v=20241029130806"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20241029130806"></script>
+<script type="module" src="js/app.js?_v=20241029130806"></script>
+</body>
+</html>
+  </body>
+</html>
