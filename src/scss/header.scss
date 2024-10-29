@@ -4,6 +4,7 @@
   left: 0;
   right: 0;
   z-index: 99;
+  background-color: var(--bg, $bg);
   @include transition;
   &__container {
     display: flex;
@@ -257,7 +258,6 @@
     }
   }
   &.scroll {
-    background-color: var(--bg, $bg);
     box-shadow: 0 0 24px rgba(34, 30, 31, 0.08);
   }
 }

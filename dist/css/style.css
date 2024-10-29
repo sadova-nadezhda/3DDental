@@ -684,6 +684,7 @@ h6 {
   left: 0;
   right: 0;
   z-index: 99;
+  background-color: var(--bg, #F6F8FF);
   transition: all 0.3s ease-out;
 }
 
@@ -870,7 +871,6 @@ h6 {
 }
 
 .header.scroll {
-  background-color: var(--bg, #F6F8FF);
   box-shadow: 0 0 24px rgba(34, 30, 31, 0.08);
 }
 
@@ -4830,7 +4830,7 @@ h6 {
   min-height: 393px;
   border-radius: 100%;
   background: rgba(31, 89, 174, 0.7);
-  filter: blur(100px);
+  filter: blur(50px);
   z-index: -1;
 }
 
