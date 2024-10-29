@@ -161,8 +161,8 @@ window.addEventListener("load", () => {
       disableOnInteraction: false,
     },
     navigation: {
-      nextEl: ".combo-button-next",
-      prevEl: ".combo-button-prev",
+      nextEl: ".services-combo-button-next",
+      prevEl: ".services-combo-button-prev",
     },
   });
   const postSwiper = new Swiper(".postSwiper", {
