@@ -5832,6 +5832,10 @@ h6 {
     row-gap: 16px;
   }
 
+  .services-combo__card {
+    padding: 35px;
+  }
+
   .services__accordion .accordion-header {
     font-size: 24px;
   }
@@ -6966,6 +6970,10 @@ h6 {
   .services-combo__title {
     margin-bottom: 32px;
     font-size: 24px;
+  }
+
+  .services-combo__card {
+    padding: 24px;
   }
 
   .services-combo__icon {

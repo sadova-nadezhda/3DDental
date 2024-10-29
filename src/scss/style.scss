@@ -1881,6 +1881,12 @@
           opacity: 1;
         }
       }
+      @media(max-width: 1024px) {
+        padding: 35px;
+      }
+      @media(max-width: 767px) {
+        padding: 24px;
+      }
       @media(max-width: 520px) {
         width: 100%;
       }
